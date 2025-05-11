@@ -1,15 +1,27 @@
 import React, { createContext, useState, useContext } from 'react';
 
-const AppContext = createContext();
+const ApplicationContext = createContext();
 
-export const AppProvider = ({ children }) => {
-  const [activePage, setActivePage] = useState('dashboard');
+export default function AppContextProvider({ children }) {
+  const [route, setRoute] = useState('dashboard');
+  console.log(route);
+
+  //Handling Route
+  const handleRoute = (value) => {
+    setRoute(value);
+  };
+
+  //Object
+  const contextValue = {
+    route,
+    setRoute,
+
+    handleRoute,
+  };
 
   return (
-    <AppContext.Provider value={{ activePage, setActivePage }}>
-      {children}
-    </AppContext.Provider>
+    <AppContext.Provider value={contextValue}>{children}</AppContext.Provider>
   );
-};
+}
 
-export const useAppContext = () => useContext(AppContext);
+export const AppContext = ApplicationContext;

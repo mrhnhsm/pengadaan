@@ -1,21 +1,19 @@
-import AppContext from "antd/es/app/context";
-import React, { useContext } from "react";
-import DashboardUtama from "../../views/Card";
-import DashboardRupa from "../../views/Card2";
+import React, { useContext } from 'react';
+import DashboardUtama from '../../views/DashboardUtama';
+import DashboardRupa from '../../views/DashboardRupa';
+import { AppContext } from '../../context/AppContext';
 
 export default function Route() {
   const { route } = useContext(AppContext);
 
   const renderPage = () => {
     switch (route) {
-      case "dashboard":
+      case 'dashboardUtama':
         return <DashboardUtama />;
-      case "profile":
+      case 'Dashboardrupa':
         return <DashboardRupa />;
-      case "settings":
-        return <Settings />;
       default:
-        return <Dashboard />;
+        return <DashboardUtama />;
     }
   };
   return <>{renderPage()}</>;

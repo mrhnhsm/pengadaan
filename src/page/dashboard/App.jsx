@@ -1,10 +1,10 @@
-import React from "react";
-import "../../App.css";
-import Routes from "../../page/routes/Routes"
-import { Layout, Menu, theme } from "antd";
-import SideBar from "../../component/Sider";
-import {UserOutlined} from "@ant-design/icons"
-import Route from "../routes/Routes";
+import React from 'react';
+import '../../App.css';
+import Routes from '../../page/routes/Routes';
+import { Layout, Menu, theme } from 'antd';
+import SideBar from '../../component/Sider';
+import { UserOutlined } from '@ant-design/icons';
+import Route from '../routes/Routes';
 const { Header, Content, Footer, Sider } = Layout;
 
 const App = () => {
@@ -17,32 +17,29 @@ const App = () => {
       <Layout>
         <Header
           style={{
-            marginLeft: "12vw",
-            width: "90vw",
-            maxWidth: "100vw",
-          }}
-        >
+            marginLeft: '12vw',
+            width: '90vw',
+            maxWidth: '100vw',
+          }}>
           <div className="header">
             <button className="profile">
-            <UserOutlined />
+              <UserOutlined />
               <p className="username">Wak leman</p>
             </button>
-            
           </div>
         </Header>
-        <Content style={{ margin: "10px 0px 0" }}>
+        <Content style={{ margin: '10px 0px 0' }}>
           <div
             style={{
-              marginLeft: "11.5vw",
+              marginLeft: '11.5vw',
               padding: 30,
               minHeight: 800,
-              width: "100vw",
-              maxWidth: "100vw",
-              background: "white",
+              width: '100vw',
+              maxWidth: '100vw',
+              background: colorBgContainer,
               borderRadius: borderRadiusLG,
-            }}
-          >
-            <Routes/>
+            }}>
+            <Routes />
           </div>
         </Content>
       </Layout>

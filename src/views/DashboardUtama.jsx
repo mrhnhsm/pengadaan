@@ -1,18 +1,18 @@
-import React, { useState } from "react";
-import { Card, Col, Row, Modal, Button } from "antd";
-import "../assets/css/card.css";
-import "../assets/css/chart.css";
-import { LineChartOutlined, ToolOutlined } from "@ant-design/icons";
-import InvestasiEksploitasi from "../component/chart/InvestasiEksploitasi";
-import InvestasiRealRupa from "../component/chart/InvestasiRealRupa";
-import EksploitasiRealRupa from "../component/chart/EksploitasiRealRupa";
-import TenderTerbatas from "../component/chart/TenderTerbatas";
-import PenunjukkanLangsung from "../component/chart/PenunjukkanLangusng";
-import TenderPenunjukkanLangsung from "../component/chart/TenderPenunjukkanLangsung";
+import React, { useState } from 'react';
+import { Card, Col, Row, Modal, Button } from 'antd';
+import '../assets/css/card.css';
+import '../assets/css/chart.css';
+import { LineChartOutlined, ToolOutlined } from '@ant-design/icons';
+import InvestasiEksploitasi from '../component/chart/InvestasiEksploitasi';
+import InvestasiRealRupa from '../component/chart/InvestasiRealRupa';
+import EksploitasiRealRupa from '../component/chart/EksploitasiRealRupa';
+import TenderTerbatas from '../component/chart/TenderTerbatas';
+import PenunjukkanLangsung from '../component/chart/PenunjukkanLangusng';
+import TenderPenunjukkanLangsung from '../component/chart/TenderPenunjukkanLangsung';
 
-const CardBasic = () => {
+export default function DashboardUtama() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [modalContent, setModalContent] = useState("");
+  const [modalContent, setModalContent] = useState('');
 
   const showModal = (contentType) => {
     setModalContent(contentType);
@@ -43,35 +43,38 @@ const CardBasic = () => {
       case 6:
         return <TenderPenunjukkanLangsung detailMode={true} />;
       default:
-        return <p style={{ color: "white" }}>Tidak ada konten.</p>;
+        return <p style={{ color: 'white' }}>Tidak ada konten.</p>;
     }
   };
 
   return (
     <div>
       {/* baris pertama */}
-      <Row gutter={10} style={{ marginBottom: "2vh" }}>
+      <Row
+        gutter={10}
+        style={{ marginBottom: '2vh' }}>
         <Col span={11}>
           {/* Investasi */}
           <Card
             className="card-hover"
             style={{
-              backgroundColor: "#2c3e50",
+              backgroundColor: '#2c3e50',
               marginBottom: 16,
-              height: "40vh",
-              overflow: "hidden",
-            }}
-          >
+              height: '40vh',
+              overflow: 'hidden',
+            }}>
             <div className="container">
               <div className="container-top-card">
-                <p className="title">
-                  INVESTASI
-                </p>
+                <p className="title">INVESTASI</p>
                 <p className="persentase">20%</p>
               </div>
               <div className="container-row-2">
                 <LineChartOutlined
-                  style={{ fontSize: "10vh", marginLeft: "10%", marginBottom:40 }}
+                  style={{
+                    fontSize: '10vh',
+                    marginLeft: '10%',
+                    marginBottom: 40,
+                  }}
                 />
                 <h2 className="paket">20 Paket</h2>
               </div>
@@ -85,12 +88,11 @@ const CardBasic = () => {
           <Card
             className="card-hover"
             style={{
-              backgroundColor: "#2c3e50",
+              backgroundColor: '#2c3e50',
               marginBottom: 16,
-              height: "40vh",
-              overflow: "hidden",
-            }}
-          >
+              height: '40vh',
+              overflow: 'hidden',
+            }}>
             <div className="container">
               <div className="container-top-card">
                 <p className="title">
@@ -100,8 +102,7 @@ const CardBasic = () => {
                 <Button
                   className="detail-btn"
                   type="primary"
-                  onClick={() => showModal(2)}
-                >
+                  onClick={() => showModal(2)}>
                   Lihat Detail
                 </Button>
               </div>
@@ -115,21 +116,24 @@ const CardBasic = () => {
           <Card
             className="card-hover"
             style={{
-              backgroundColor: "#2c3e50",
+              backgroundColor: '#2c3e50',
               marginBottom: 16,
-              height: "40vh",
-              overflow: "hidden",
-            }}
-          >
+              height: '40vh',
+              overflow: 'hidden',
+            }}>
             <div className="container">
               <div className="container-top-card">
-                <p className="title">
-                  EKSPLOITASI
-                </p>
+                <p className="title">EKSPLOITASI</p>
                 <p className="persentase">20%</p>
               </div>
               <div className="container-row-2">
-                <ToolOutlined style={{ fontSize: "10vh", marginLeft: "10%", marginBottom:40 }} />
+                <ToolOutlined
+                  style={{
+                    fontSize: '10vh',
+                    marginLeft: '10%',
+                    marginBottom: 40,
+                  }}
+                />
                 <h2 className="paket">60 Paket</h2>
               </div>
               <div className="text-paket">
@@ -141,12 +145,11 @@ const CardBasic = () => {
           <Card
             className="card-hover"
             style={{
-              backgroundColor: "#2c3e50",
+              backgroundColor: '#2c3e50',
               marginBottom: 16,
-              height: "40vh",
-              overflow: "hidden",
-            }}
-          >
+              height: '40vh',
+              overflow: 'hidden',
+            }}>
             <div className="container">
               <div className="container-top-card">
                 <p className="title">
@@ -156,8 +159,7 @@ const CardBasic = () => {
                 <Button
                   className="detail-btn"
                   type="primary"
-                  onClick={() => showModal(3)}
-                >
+                  onClick={() => showModal(3)}>
                   Lihat Detail
                 </Button>
               </div>
@@ -171,12 +173,11 @@ const CardBasic = () => {
         <Card
           className="card-hover"
           style={{
-            backgroundColor: "#2c3e50",
+            backgroundColor: '#2c3e50',
             marginBottom: 16,
-            height: "70vh",
-            overflow: "hidden",
-          }}
-        >
+            height: '70vh',
+            overflow: 'hidden',
+          }}>
           <div className="container">
             <div className="container-top-card">
               <p className="title">
@@ -187,8 +188,7 @@ const CardBasic = () => {
               <Button
                 className="detail-btn"
                 type="primary"
-                onClick={() => showModal(1)}
-              >
+                onClick={() => showModal(1)}>
                 Lihat Detail
               </Button>
             </div>
@@ -202,22 +202,23 @@ const CardBasic = () => {
           <Card
             className="card-hover"
             style={{
-              backgroundColor: "#2c3e50",
+              backgroundColor: '#2c3e50',
               marginBottom: 16,
-              height: "40vh",
-              overflow: "hidden",
-            }}
-          >
+              height: '40vh',
+              overflow: 'hidden',
+            }}>
             <div className="container">
               <div className="container-top-card">
-                <p className="title">
-                  TENDER TERBATAS
-                </p>
+                <p className="title">TENDER TERBATAS</p>
                 <p className="persentase">20%</p>
               </div>
               <div className="container-row-2">
                 <LineChartOutlined
-                  style={{ fontSize: "10vh", marginLeft: "10%", marginBottom:40 }}
+                  style={{
+                    fontSize: '10vh',
+                    marginLeft: '10%',
+                    marginBottom: 40,
+                  }}
                 />
                 <h2 className="paket">20 Paket</h2>
               </div>
@@ -231,12 +232,11 @@ const CardBasic = () => {
           <Card
             className="card-hover"
             style={{
-              backgroundColor: "#2c3e50",
+              backgroundColor: '#2c3e50',
               marginBottom: 16,
-              height: "40vh",
-              overflow: "hidden",
-            }}
-          >
+              height: '40vh',
+              overflow: 'hidden',
+            }}>
             <div className="container">
               <div className="container-top-card">
                 <p className="title">
@@ -246,8 +246,7 @@ const CardBasic = () => {
                 <Button
                   className="detail-btn"
                   type="primary"
-                  onClick={() => showModal(4)}
-                >
+                  onClick={() => showModal(4)}>
                   Lihat Detail
                 </Button>
               </div>
@@ -260,22 +259,23 @@ const CardBasic = () => {
           <Card
             className="card-hover"
             style={{
-              backgroundColor: "#2c3e50",
+              backgroundColor: '#2c3e50',
               marginBottom: 16,
-              height: "40vh",
-              overflow: "hidden",
-            }}
-          >
+              height: '40vh',
+              overflow: 'hidden',
+            }}>
             <div className="container">
               <div className="container-top-card">
-                <p className="title">
-                  PENUNJUKKAN LANGSUNG
-                </p>
+                <p className="title">PENUNJUKKAN LANGSUNG</p>
                 <p className="persentase">20%</p>
               </div>
               <div className="container-row-2">
                 <LineChartOutlined
-                  style={{ fontSize: "10vh", marginLeft: "10%", marginBottom:40 }}
+                  style={{
+                    fontSize: '10vh',
+                    marginLeft: '10%',
+                    marginBottom: 40,
+                  }}
                 />
                 <h2 className="paket">20 Paket</h2>
               </div>
@@ -289,12 +289,11 @@ const CardBasic = () => {
           <Card
             className="card-hover"
             style={{
-              backgroundColor: "#2c3e50",
+              backgroundColor: '#2c3e50',
               marginBottom: 16,
-              height: "40vh",
-              overflow: "hidden",
-            }}
-          >
+              height: '40vh',
+              overflow: 'hidden',
+            }}>
             <div className="container">
               <div className="container-top-card">
                 <p className="title">
@@ -304,8 +303,7 @@ const CardBasic = () => {
                 <Button
                   className="detail-btn"
                   type="primary"
-                  onClick={() => showModal(5)}
-                >
+                  onClick={() => showModal(5)}>
                   Lihat Detail
                 </Button>
               </div>
@@ -318,12 +316,11 @@ const CardBasic = () => {
           <Card
             className="card-hover"
             style={{
-              backgroundColor: "#2c3e50",
+              backgroundColor: '#2c3e50',
               marginBottom: 16,
-              height: "7  0vh",
-              overflow: "hidden",
-            }}
-          >
+              height: '7  0vh',
+              overflow: 'hidden',
+            }}>
             <div className="container">
               <div className="container-top-card">
                 <p className="title">
@@ -334,8 +331,7 @@ const CardBasic = () => {
                 <Button
                   className="detail-btn"
                   type="primary"
-                  onClick={() => showModal(6)}
-                >
+                  onClick={() => showModal(6)}>
                   Lihat Detail
                 </Button>
               </div>
@@ -351,12 +347,10 @@ const CardBasic = () => {
         onCancel={handleCancel}
         width={900}
         styles={{
-          body: { backgroundColor: "#2c3e50", height: "70vh" },
-        }}
-      >
+          body: { backgroundColor: '#2c3e50', height: '70vh' },
+        }}>
         {renderModalContent()}
       </Modal>
     </div>
   );
-};
-export default CardBasic;
+}

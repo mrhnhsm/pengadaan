@@ -1,10 +1,13 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './page/dashboard/App'
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import './index.css';
+import App from './page/dashboard/App';
+import AppContextProvider from './context/AppContext';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
-  </StrictMode>,
-)
+    <AppContextProvider>
+      <App />
+    </AppContextProvider>
+  </StrictMode>
+);
