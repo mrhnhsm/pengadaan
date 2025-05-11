@@ -91,7 +91,14 @@
   width: 100vh;
 }
 
+.title-page {
+  text-align: center;
+  font-size: xx-large;
+}
 
+.top-card{
+  background-color: #3F51B5;
+}
 
 
 @media (max-width: 768px) {
@@ -126,4 +133,6 @@
   .container {
     padding: 10px;
   }
+
+
 }
