@@ -9,8 +9,8 @@ export default function DashboardUtama() {
   return (
     <div>
       {/* baris pertama */}
-      <div className="title-page">
-        <h2>EFISIENSI PENGADAAN DAN PROCUREMENT EXCELLENCE</h2>
+      <div >
+        <h1>EFISIENSI PENGADAAN DAN PROCUREMENT EXCELLENCE</h1>
       </div>
       <TopCardGroup/>
       <CardIsi/>

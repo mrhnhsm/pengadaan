@@ -53,6 +53,11 @@ const SideBar = () => {
             icon: <AppstoreOutlined />,
             label: 'Rupa',
           },
+          {
+            key: 'Dashboardsla',
+            icon: <AppstoreOutlined />,
+            label: 'SLA',
+          },
         ]}
       />
     </Sider>
