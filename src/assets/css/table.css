@@ -16,3 +16,12 @@
   overflow-x: auto;
 }
 
+.table-wrapper .ant-table-thead > tr > th {
+  background-color: #001529; /* atau warna branding kamu */
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+

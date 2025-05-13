@@ -2,6 +2,14 @@ import { Table } from "antd";
 import "../../assets/css/table.css"; // Pastikan ini mengimpor file CSS di atas
 
 const columnsNamaVendor = [
+  {
+    title: "NO",
+    dataIndex: "no",
+    key: "no",
+    render: (text, record, index) => index + 1,
+    width: 50,
+    align: "center",
+  },
   { title: "NOMOR PK", dataIndex: "nomor_pk", key: "nomor_pk" },
   { title: "NAMA PAKET", dataIndex: "nama_paket", key: "nama_paket" },
   { title: "SUMBER DANA", dataIndex: "sumber_dana", key: "sumber_dana" },
@@ -45,6 +53,7 @@ export function TableNamaVendor() {
   return (
     <div className="table-wrapper">
       <Table
+        bordered
         columns={columnsNamaVendor}
         dataSource={dataNamaVendor}
         size="small"
@@ -56,6 +65,14 @@ export function TableNamaVendor() {
 }
 
 const columnsBidang = [
+  {
+    title: "NO",
+    dataIndex: "no",
+    key: "no",
+    render: (text, record, index) => index + 1,
+    width: 50,
+    align: "center",
+  },
   { title: "NOMOR PK", dataIndex: "nomor_pk", key: "nomor_pk" },
   { title: "NAMA PAKET", dataIndex: "nama_paket", key: "nama_paket" },
   { title: "SUMBER DANA", dataIndex: "sumber_dana", key: "sumber_dana" },
@@ -99,6 +116,7 @@ export function TableBidang() {
   return (
     <div className="table-wrapper">
       <Table
+        bordered
         columns={columnsBidang}
         dataSource={dataBidang}
         size="small"
@@ -109,6 +127,14 @@ export function TableBidang() {
   );
 }
 const columnsWilayah = [
+  {
+    title: "NO",
+    dataIndex: "no",
+    key: "no",
+    render: (text, record, index) => index + 1,
+    width: 50,
+    align: "center",
+  },
   { title: "NOMOR PK", dataIndex: "nomor_pk", key: "nomor_pk" },
   { title: "NAMA PAKET", dataIndex: "nama_paket", key: "nama_paket" },
   { title: "SUMBER DANA", dataIndex: "sumber_dana", key: "sumber_dana" },
@@ -152,6 +178,7 @@ export function TableWilayah() {
   return (
     <div className="table-wrapper">
       <Table
+        bordered
         columns={columnsWilayah}
         dataSource={dataWilayah}
         size="small"
@@ -161,7 +188,3 @@ export function TableWilayah() {
     </div>
   );
 }
-
-
-
-

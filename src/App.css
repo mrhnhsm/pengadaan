@@ -10,6 +10,11 @@ body{
   display: flex;
   flex-direction: row-reverse;
   padding: 1vh;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  margin-left: 9vw;
+  width: 88vw;
+  max-width: 110vw;
+
 }
 
 .title{
@@ -28,16 +33,16 @@ body{
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: 5vh;
+  /* height: 5vh; */
   gap: 20px;
   color: black;
   border: 2px solid black;
   background-color: transparent;
   font-size: medium;
-  margin-right: 20px;
+  margin-left: 100px;
   cursor: pointer; /* biar terlihat seperti tombol */
   transition: background-color 0.3s, color 0.3s; /* smooth hover */
-  margin-top: 10px;
+  /* margin-top: 10px; */
 }
 
 .profile:hover {

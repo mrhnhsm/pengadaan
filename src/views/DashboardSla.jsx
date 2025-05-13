@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Card, Col, Row, Button } from "antd";
 import "../assets/css/card.css";
 import "../assets/css/chart.css";
+import "../assets/css/cardSla.css";
 import {
   TableNamaVendor,
   TableBidang,
@@ -41,7 +42,7 @@ export default function DashboardSla() {
             style={{
               backgroundColor: "#2c3e50",
               marginBottom: 16,
-              height: "40vh",
+              height: "25vh",
               overflow: "hidden",
             }}
           >
@@ -53,7 +54,9 @@ export default function DashboardSla() {
                   (SLA = 6-14 HARI)
                 </p>
               </div>
-              <h1>26 Hari</h1>
+              <div className="persentase-sla">
+                <h1>26 Hari</h1>
+              </div>
             </div>
           </Card>
         </Col>
@@ -64,7 +67,7 @@ export default function DashboardSla() {
             style={{
               backgroundColor: "#2c3e50",
               marginBottom: 16,
-              height: "40vh",
+              height: "25vh",
               overflow: "hidden",
             }}
           >
@@ -76,7 +79,9 @@ export default function DashboardSla() {
                   (SLA = 13-25 HARI)
                 </p>
               </div>
-              <h1>%</h1>
+              <div className="persentase-sla">
+                <h1>%</h1>
+              </div>
             </div>
           </Card>
         </Col>
@@ -88,7 +93,7 @@ export default function DashboardSla() {
             style={{
               backgroundColor: "#2c3e50",
               marginBottom: 16,
-              height: "40vh",
+              height: "20vh",
               overflow: "hidden",
             }}
           >
@@ -96,7 +101,9 @@ export default function DashboardSla() {
               <div className="container-top-card">
                 <p className="title">NAMA VENDOR</p>
               </div>
-              <h1>BLA BLA BLA VENDOR</h1>
+              <div className="persentase-sla">
+                <h1>PT. Sejahtera Abadi</h1>
+              </div>
             </div>
           </Card>
         </Col>
@@ -107,17 +114,17 @@ export default function DashboardSla() {
             style={{
               backgroundColor: "#2c3e50",
               marginBottom: 16,
-              height: "40vh",
+              height: "20vh",
               overflow: "hidden",
             }}
           >
             <div className="container">
               <div className="container-top-card">
-                <p className="title">
-                  JUMLAH PAKET
-                </p>
+                <p className="title">JUMLAH PAKET</p>
               </div>
-              <h1>20 PAKET</h1>
+              <div className="persentase-sla">
+                <h1>20 PAKET</h1>
+              </div>
             </div>
           </Card>
         </Col>
@@ -128,17 +135,17 @@ export default function DashboardSla() {
             style={{
               backgroundColor: "#2c3e50",
               marginBottom: 16,
-              height: "40vh",
+              height: "20vh",
               overflow: "hidden",
             }}
           >
             <div className="container">
               <div className="container-top-card">
-                <p className="title">
-                  NILAI PAKET
-                </p>
+                <p className="title">NILAI PAKET</p>
               </div>
-              <h1>RP.200.000</h1>
+              <div className="persentase-sla">
+                <h1>RP.200.000</h1>
+              </div>
             </div>
           </Card>
         </Col>
@@ -152,7 +159,7 @@ export default function DashboardSla() {
             style={{
               backgroundColor: "#2c3e50",
               marginBottom: 16,
-              height: "40vh",
+              height: "20vh",
               overflow: "hidden",
             }}
           >
@@ -160,7 +167,9 @@ export default function DashboardSla() {
               <div className="container-top-card">
                 <p className="title">BIDANG</p>
               </div>
-              <h1>BLA BLA BLA BIDANG</h1>
+              <div className="persentase-sla">
+                <h1>Transportasi</h1>
+              </div>
             </div>
           </Card>
         </Col>
@@ -171,17 +180,17 @@ export default function DashboardSla() {
             style={{
               backgroundColor: "#2c3e50",
               marginBottom: 16,
-              height: "40vh",
+              height: "20vh",
               overflow: "hidden",
             }}
           >
             <div className="container">
               <div className="container-top-card">
-                <p className="title">
-                  JUMLAH PAKET
-                </p>
+                <p className="title">JUMLAH PAKET</p>
               </div>
-              <h1>20 PAKET</h1>
+              <div className="persentase-sla">
+                <h1>20 PAKET</h1>
+              </div>
             </div>
           </Card>
         </Col>
@@ -192,23 +201,22 @@ export default function DashboardSla() {
             style={{
               backgroundColor: "#2c3e50",
               marginBottom: 16,
-              height: "40vh",
+              height: "20vh",
               overflow: "hidden",
             }}
           >
             <div className="container">
               <div className="container-top-card">
-                <p className="title">
-                  NILAI PAKET
-                </p>
+                <p className="title">NILAI PAKET</p>
               </div>
-              <h1>RP.200.000</h1>
+              <div className="persentase-sla">
+                <h1>RP.200.000</h1>
+              </div>
             </div>
           </Card>
         </Col>
       </Row>
       <TableWilayah />
-
 
       <Row gutter={10} style={{ marginBottom: "2vh" }}>
         <Col span={7}>
@@ -217,7 +225,7 @@ export default function DashboardSla() {
             style={{
               backgroundColor: "#2c3e50",
               marginBottom: 16,
-              height: "40vh",
+              height: "20vh",
               overflow: "hidden",
             }}
           >
@@ -225,7 +233,9 @@ export default function DashboardSla() {
               <div className="container-top-card">
                 <p className="title">WILAYAH</p>
               </div>
-              <h1>BLA BLA BLA WILAYAH</h1>
+              <div className="persentase-sla">
+                <h1>Adolina</h1>
+              </div>
             </div>
           </Card>
         </Col>
@@ -236,17 +246,17 @@ export default function DashboardSla() {
             style={{
               backgroundColor: "#2c3e50",
               marginBottom: 16,
-              height: "40vh",
+              height: "20vh",
               overflow: "hidden",
             }}
           >
             <div className="container">
               <div className="container-top-card">
-                <p className="title">
-                  JUMLAH PAKET
-                </p>
+                <p className="title">JUMLAH PAKET</p>
               </div>
-              <h1>20 PAKET</h1>
+              <div className="persentase-sla">
+                <h1>20 PAKET</h1>
+              </div>
             </div>
           </Card>
         </Col>
@@ -257,17 +267,17 @@ export default function DashboardSla() {
             style={{
               backgroundColor: "#2c3e50",
               marginBottom: 16,
-              height: "40vh",
+              height: "20vh",
               overflow: "hidden",
             }}
           >
             <div className="container">
               <div className="container-top-card">
-                <p className="title">
-                  NILAI PAKET
-                </p>
+                <p className="title">NILAI PAKET</p>
               </div>
-              <h1>RP.200.000</h1>
+              <div className="persentase-sla">
+                <h1>RP.200.000</h1>
+              </div>
             </div>
           </Card>
         </Col>

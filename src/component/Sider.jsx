@@ -20,7 +20,7 @@ const SideBar = () => {
         left: 0,
         top: 0,
         height: '100vh',
-        zIndex: 1000,
+        zIndex: 1200,
       }}
       width="12vw"
       breakpoint="lg"
