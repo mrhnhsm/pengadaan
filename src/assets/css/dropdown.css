@@ -1,0 +1,29 @@
+.custom-dropdown {
+  width: 220px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.custom-dropdown .ant-select-selector {
+  border-radius: 8px !important;
+  padding: 8px 12px !important;
+  height: 42px !important;
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+}
+
+.custom-dropdown .ant-select-arrow {
+  color: black;
+}
+
+.custom-dropdown .ant-select-item-option-selected {
+  background-color: #e6f7ff !important;
+  font-weight: bold;
+}
+
+.custom-dropdown .ant-select-item-option:hover {
+  background-color: #f0f5ff !important;
+}

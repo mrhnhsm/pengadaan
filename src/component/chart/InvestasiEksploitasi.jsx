@@ -1,14 +1,14 @@
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 import "../../assets/css/chart.css";
-const ChartComponent = ({ detailMode = false }) => {
+const InvestasiEksploitasi = ({ detailMode = false }) => {
   const options = {
     chart: {
       type: "pie",
       backgroundColor: "transparent",
       plotBackgroundColor: "transparent",
-      height: detailMode ? 650 : 560, // 💡 bedakan tinggi chart
-      width: detailMode ? 650 : 1500, // 💡 bedakan tinggi chart
+      height: detailMode ? 650 : 560, 
+      width: detailMode ? 650 : 1500,
     },
     
     tooltip: {
@@ -16,7 +16,7 @@ const ChartComponent = ({ detailMode = false }) => {
       backgroundColor: "#ffffff",
       style: {
         color: "#000000",
-        fontSize: detailMode ? "14px" : "12px", // 💡 bedakan font tooltip
+        fontSize: detailMode ? "14px" : "12px",
       },
     },
     accessibility: {
@@ -33,7 +33,7 @@ const ChartComponent = ({ detailMode = false }) => {
           format: "<b>{point.name}</b>: {point.percentage:.1f} %",
           style: {
             color: "#ffffff",
-            fontSize: detailMode ? "14px" : "12px", // 💡 data label font size
+            fontSize: detailMode ? "14px" : "12px",
           },
         },
       },
@@ -53,4 +53,4 @@ const ChartComponent = ({ detailMode = false }) => {
   return <HighchartsReact highcharts={Highcharts} options={options} />;
 };
 
-export default ChartComponent;
+export default InvestasiEksploitasi;

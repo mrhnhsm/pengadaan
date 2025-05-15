@@ -7,13 +7,13 @@ const TenderTerbatas = ({ detailMode = false }) => {
       type: "pie",
       backgroundColor: "transparent",
       plotBackgroundColor: "transparent",
-      height: detailMode ? 650 : 250, // 💡 bedakan tinggi chart
+      height: detailMode ? 650 : 250,
     },
     title: {
       text: detailMode ? "Distribusi Anggaran Detail" : "",
       style: {
         color: "#ffffff",
-        fontSize: detailMode ? "20px" : "6px", // 💡 bedakan ukuran font title
+        fontSize: detailMode ? "20px" : "6px",
       },
     },
     tooltip: {
@@ -21,7 +21,7 @@ const TenderTerbatas = ({ detailMode = false }) => {
       backgroundColor: "#ffffff",
       style: {
         color: "#000000",
-        fontSize: detailMode ? "14px" : "12px", // 💡 bedakan font tooltip
+        fontSize: detailMode ? "14px" : "12px",
       },
     },
     accessibility: {
@@ -38,7 +38,7 @@ const TenderTerbatas = ({ detailMode = false }) => {
           format: "<b>{point.name}</b>: {point.percentage:.1f} %",
           style: {
             color: "#ffffff",
-            fontSize: detailMode ? "14px" : "12px", // 💡 data label font size
+            fontSize: detailMode ? "14px" : "12px",
           },
         },
       },

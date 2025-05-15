@@ -23,7 +23,7 @@ export default function TopCardGroup () {
             <div className="container">
               <div className="container-top-card">
                 <p className="title">{item.title}</p>
-                <p className="persentase">
+                <p className="show-icon">
                   <LineChartOutlined />
                 </p>
               </div>

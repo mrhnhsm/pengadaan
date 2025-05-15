@@ -7,8 +7,8 @@ const TenderPenunjukkanLangsung = ({ detailMode = false }) => {
       type: "pie",
       backgroundColor: "transparent",
       plotBackgroundColor: "transparent",
-      height: detailMode ? 650 : 560, // 💡 bedakan tinggi chart
-      width: detailMode ? 650 : 1500, // 💡 bedakan tinggi chart
+      height: detailMode ? 650 : 560, 
+      width: detailMode ? 650 : 1500, 
     },
     
     tooltip: {
@@ -16,7 +16,7 @@ const TenderPenunjukkanLangsung = ({ detailMode = false }) => {
       backgroundColor: "#ffffff",
       style: {
         color: "#000000",
-        fontSize: detailMode ? "14px" : "12px", // 💡 bedakan font tooltip
+        fontSize: detailMode ? "14px" : "12px", 
       },
     },
     accessibility: {
@@ -33,7 +33,7 @@ const TenderPenunjukkanLangsung = ({ detailMode = false }) => {
           format: "<b>{point.name}</b>: {point.percentage:.1f} %",
           style: {
             color: "#ffffff",
-            fontSize: detailMode ? "14px" : "12px", // 💡 data label font size
+            fontSize: detailMode ? "14px" : "12px",
           },
         },
       },

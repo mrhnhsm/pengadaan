@@ -1,18 +1,14 @@
 import React, { useState } from "react";
 import { Row, Col, Card, Button, Modal } from "antd";
-import { LineChartOutlined, ToolOutlined } from "@ant-design/icons";
 import InvestasiEksploitasi from "../../chart/InvestasiEksploitasi";
 import InvestasiRealRupa from "../../chart/InvestasiRealRupa";
 import EksploitasiRealRupa from "../../chart/EksploitasiRealRupa";
 import TenderTerbatas from "../../chart/TenderTerbatas";
-import PenunjukkanLangsung from "../../chart/PenunjukkanLangusng";
+import PenunjukkanLangsung from "../../chart/PenunjukkanLangsung";
 import TenderPenunjukkanLangsung from "../../chart/TenderPenunjukkanLangsung";
-import TopCardGroup from "../../card/Dashboard-Utama/TopCardGroup";
+import { CheckCircleOutlined, TeamOutlined, BarChartOutlined } from "@ant-design/icons";
 
 export default function CardIsi() {
-  //   const showModal = (id) => {
-  //     console.log("Show modal with ID:", id);
-  //   };
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState("");
 
@@ -53,48 +49,52 @@ export default function CardIsi() {
     <div>
       {[
         {
-          title:"REGIONAL 2",
+          title: "REGIONAL 2",
           // card 1
           titleCard1: "RUPA REGIONAL 2 (SETAHUN)",
           persentase1: 30,
           paket1: 45,
           nominal1: 20000000,
-
+          icon1: TeamOutlined,
+          
           //   card 2
           titleCard2: "CHART PAKET REGIONAL 2",
           modal2: 1,
-
+          
           //   card 3
           titleCard3: "PAKET SELESAI (SD)",
           persentase3: 30,
           paket3: 45,
           nominal3: 20000000,
-
+          icon3: CheckCircleOutlined,
+          
           //   card 4
           titleCard4: "CHART CHART NILAI PAKET REGIONAL 2",
           modal4: 2,
-
+          
           //   card 5
           titleCard5: "CHART (INVESTASI VS EKSPLOITASI)",
           modal5: 3,
         },
         {
-          title:"KSO (EKS. N2)",
+          title: "KSO (EKS. N2)",
           // card 1
           titleCard1: "RUPA KSO (EKS. N2) (SETAHUN)",
           persentase1: 50,
           paket1: 25,
           nominal1: 50000000,
-
+          icon1: BarChartOutlined,
+          
           //   card 2
           titleCard2: "CHART PAKET KSO",
           modal2: 4,
-
+          
           //   card 3
           titleCard3: "PAKET SELESAI (SD)",
           persentase3: 30,
           paket3: 45,
           nominal3: 20000000,
+          icon3: CheckCircleOutlined,
 
           //   card 4
           titleCard4: "CHART NILAI PAKET KSO",
@@ -110,7 +110,6 @@ export default function CardIsi() {
                 style={{
                   backgroundColor: "#2c3e50",
                   marginBottom: 16,
-                  height: "40vh",
                   overflow: "hidden",
                 }}
               >
@@ -120,9 +119,9 @@ export default function CardIsi() {
                     <p className="persentase">{item.persentase1}%</p>
                   </div>
                   <div className="container-row-2">
-                    <LineChartOutlined
+                    <item.icon1
                       style={{
-                        fontSize: "10vh",
+                        fontSize: "6vh",
                         marginLeft: "10%",
                         marginBottom: 40,
                       }}
@@ -140,7 +139,6 @@ export default function CardIsi() {
                 style={{
                   backgroundColor: "#2c3e50",
                   marginBottom: 16,
-                  height: "40vh",
                   overflow: "hidden",
                 }}
               >
@@ -169,7 +167,6 @@ export default function CardIsi() {
                 style={{
                   backgroundColor: "#2c3e50",
                   marginBottom: 16,
-                  height: "40vh",
                   overflow: "hidden",
                 }}
               >
@@ -179,9 +176,9 @@ export default function CardIsi() {
                     <p className="persentase">{item.persentase3}%</p>
                   </div>
                   <div className="container-row-2">
-                    <ToolOutlined
+                    <item.icon3
                       style={{
-                        fontSize: "10vh",
+                        fontSize: "6vh",
                         marginLeft: "10%",
                         marginBottom: 40,
                       }}
@@ -199,7 +196,6 @@ export default function CardIsi() {
                 style={{
                   backgroundColor: "#2c3e50",
                   marginBottom: 16,
-                  height: "40vh",
                   overflow: "hidden",
                 }}
               >

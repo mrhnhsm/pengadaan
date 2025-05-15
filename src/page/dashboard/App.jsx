@@ -10,24 +10,18 @@ const { RangePicker } = DatePicker;
 const { Header, Content } = Layout;
 
 const App = () => {
+  const [collapsed, setCollapsed] = useState(false);
+
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
-  const [dateRange, setDateRange] = useState({
-    startDate: null,
-    endDate: null,
-  });
-
-  const handleStartChange = (date) => {
-    setDateRange((prev) => ({ ...prev, startDate: date }));
-  };
-
-  const handleEndChange = (date) => {
-    setDateRange((prev) => ({ ...prev, endDate: date }));
+  const handleRangeChange = (dates, dateStrings) => {
+    const [startDate, endDate] = dateStrings;
+    console.log("Start:", startDate, "End:", endDate);
   };
   return (
     <Layout>
-      <SideBar />
+      <SideBar collapsed={collapsed} setCollapsed={setCollapsed} style= {{ transition:"width 5.9s ease;"}}/>
       <Layout>
         <Header
           style={{
@@ -35,20 +29,16 @@ const App = () => {
             top: 0,
             width: "100%",
             zIndex: 1000,
+            padding: 0,
             background: colorBgContainer,
           }}
         >
           <div className="header">
             <div className="date-filter">
-              <DatePicker
-                placeholder="Start Date"
-                onChange={handleStartChange}
-                style={{ width: 130 }}
-              />
-              <DatePicker
-                placeholder="End Date"
-                onChange={handleEndChange}
-                style={{ width: 130 }}
+              <RangePicker
+                placeholder={["Start Date", "End Date"]}
+                onChange={handleRangeChange}
+                style={{ width: 260 }}
               />
               <button className="profile">
                 <UserOutlined />
@@ -59,18 +49,16 @@ const App = () => {
         </Header>
         <Content
           style={{
-            // margin: "10px 0px 0",
-            marginTop: 100, // atau tinggi header kamu
-            // padding: 10,
+            marginTop: 100,
           }}
         >
           <div
             style={{
-              marginLeft: "11.5vw",
+              marginLeft: collapsed ? 80 : "12vw", 
+              transition: "margin-left 0.3s ease, width 0.3s ease " ,
               padding: 30,
               minHeight: 800,
-              width: "100vw",
-              maxWidth: "100vw",
+              width: collapsed ? "109vw" : "100vw",
               background: colorBgContainer,
               borderRadius: borderRadiusLG,
             }}

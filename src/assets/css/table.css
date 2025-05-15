@@ -1,7 +1,7 @@
 /* Misalnya di App.css */
 .very-compact-table .ant-table-thead > tr > th,
 .very-compact-table .ant-table-tbody > tr > td {
-  padding: 4px 8px; /* cukup rapat, tapi tetap terbaca */
+  padding: 2px 19px; /* cukup rapat, tapi tetap terbaca */
   font-size: 12px;
   line-height: 2.2;
 }
