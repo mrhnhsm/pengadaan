@@ -1,9 +1,10 @@
-import React, { createContext, useState, useContext } from 'react';
+import React, { createContext, useState, useContext } from "react";
 
 const ApplicationContext = createContext();
 
 export default function AppContextProvider({ children }) {
-  const [route, setRoute] = useState('dashboard');
+  const [loged, setLoged] = useState(""); //Verify User ID
+  const [route, setRoute] = useState("dashboard");
   console.log(route);
 
   //Handling Route
@@ -15,7 +16,8 @@ export default function AppContextProvider({ children }) {
   const contextValue = {
     route,
     setRoute,
-
+    setLoged,
+    loged,
     handleRoute,
   };
 

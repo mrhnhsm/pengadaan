@@ -38,7 +38,7 @@ const App = () => {
               <RangePicker
                 placeholder={["Start Date", "End Date"]}
                 onChange={handleRangeChange}
-                style={{ width: 260 }}
+                style={{ width: 290}}
               />
               <button className="profile">
                 <UserOutlined />

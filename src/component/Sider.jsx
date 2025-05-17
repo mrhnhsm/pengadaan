@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { AppstoreOutlined } from "@ant-design/icons";
+import { AppstoreOutlined, FileDoneOutlined, FileImageOutlined } from "@ant-design/icons";
 import { Layout, Menu } from "antd";
 import { AppContext } from "../context/AppContext";
 import LogoPtpn from "../assets/img/PTPN-4.png";
@@ -67,6 +67,7 @@ const SideBar = ({ collapsed, setCollapsed }) => {
           backgroundColor: "#287d70",
           padding: 10,
           width: "100%",
+          fontSize:17,
         }}
         theme="dark"
         mode="inline"
@@ -81,12 +82,12 @@ const SideBar = ({ collapsed, setCollapsed }) => {
           },
           {
             key: "Dashboardrupa",
-            icon: <AppstoreOutlined />,
+            icon: <FileImageOutlined />,
             label: "Rupa",
           },
           {
             key: "Dashboardsla",
-            icon: <AppstoreOutlined />,
+            icon: <FileDoneOutlined />,
             label: "SLA",
           },
         ]}
