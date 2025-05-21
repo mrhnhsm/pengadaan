@@ -48,8 +48,8 @@ const InvestasiRealRupa = ({ detailMode = false }) => {
         name: "Anggaran",
         colorByPoint: true,
         data: [
-          { name: "Investasi", y: 60 },
           { name: "Eksploitasi", y: 30 },
+          { name: "Eksploitasi", y: 10 },
         ],
       },
     ],

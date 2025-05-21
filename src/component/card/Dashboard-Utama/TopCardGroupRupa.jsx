@@ -1,16 +1,17 @@
-// components/TopCardGroup.jsx
+// components/TopCardGroupRupa.jsx
 import React from "react";
 import { Row, Col, Card } from "antd";
 import { LineChartOutlined } from "@ant-design/icons";
 import CountUp from 'react-countup';
+import "../../../assets/css/topCard.css"
 
-export default function TopCardGroup () {
+export default function TopCardGroupRupa () {
   return (
     <Row gutter={10} style={{ marginBottom: "2vh" }}>
       {[
-        { title: "TERHADAP RKAP", value: 30 },
-        { title: "TERHADAP HPS", value: 30 },
-        { title: "PROCUREMANT EXCELLENCE", value: 30 },
+        { title: "RUPA SETAHUN", value: 30, nominal:200000 },
+        { title: "PAKET SELESAI (SD)", value: 30, nominal:200000 },
+        { title: "% CAPAIAN (REAL VS RUPA)", value: 30, nominal:200000 },
       ].map((item, index) => (
         <Col span={7} key={index}>
           <Card
@@ -25,13 +26,13 @@ export default function TopCardGroup () {
               <div className="container-top-card">
                 <p className="title">{item.title}</p>
                 <p className="show-icon">
-                  <LineChartOutlined />
+                <p className="small-persentase"><CountUp end={item.value} duration={2} />%</p>
                 </p>
               </div>
               <div className="container-row-2">
-                <h1>|</h1>
-                <h1><CountUp end={item.value} duration={2} />%</h1>
-                <h1>|</h1>
+                
+                <h1>Rp <CountUp end={item.nominal} duration={2} /></h1>
+                
               </div>
             </div>
           </Card>

@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { AppstoreOutlined, FileDoneOutlined, FileImageOutlined } from "@ant-design/icons";
+import { AppstoreOutlined, FileDoneOutlined, FileImageOutlined, UploadOutlined } from "@ant-design/icons";
 import { Layout, Menu } from "antd";
 import { AppContext } from "../context/AppContext";
 import LogoPtpn from "../assets/img/PTPN-4.png";
@@ -75,6 +75,11 @@ const SideBar = ({ collapsed, setCollapsed }) => {
         defaultSelectedKeys={[route]}
         selectedKeys={[route]}
         items={[
+          {
+            key: "inputExcel",
+            icon: <UploadOutlined />,
+            label: "Input Excel",
+          },
           {
             key: "dashboardUtama",
             icon: <AppstoreOutlined />,

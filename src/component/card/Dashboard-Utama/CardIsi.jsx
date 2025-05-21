@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Row, Col, Card, Button, Modal } from "antd";
+import CountUp from "react-countup";
 import {
   LineChartOutlined,
   ToolOutlined,
@@ -42,11 +43,12 @@ export default function CardIsi() {
     console.log(modalContent);
     switch (modalContent) {
       case 1:
-        return <InvestasiEksploitasi detailMode={true} />;
-      case 2:
         return <InvestasiRealRupa detailMode={true} />;
-      case 3:
+        case 2:
+        // return <InvestasiRealRupa detailMode={true} />;
         return <EksploitasiRealRupa detailMode={true} />;
+      case 3:
+        return <InvestasiEksploitasi detailMode={true} />;
       case 4:
         return <TenderTerbatas detailMode={true} />;
       case 5:
@@ -71,21 +73,24 @@ export default function CardIsi() {
 
           //   card 2
           titleCard2: "CHART INVESTASI",
+          ChartCard2: InvestasiRealRupa,
           modal2: 1,
-
+          
           //   card 3
           titleCard3: "EKSPLOITASI",
           persentase3: 30,
           paket3: 45,
           nominal3: 20000000,
           icon3: ToolOutlined,
-
+          
           //   card 4
           titleCard4: "CHART EKSPLOITASI",
+          ChartCard4: EksploitasiRealRupa,
           modal4: 2,
-
+          
           //   card 5
           titleCard5: "CHART (INVESTASI VS EKSPLOITASI)",
+          ChartCard5: InvestasiEksploitasi,
           modal5: 3,
         },
         {
@@ -95,24 +100,27 @@ export default function CardIsi() {
           paket1: 25,
           nominal1: 50000000,
           icon1: AuditOutlined,
-
+          
           //   card 2
           titleCard2: "CHART TENDER TERBATAS",
+          ChartCard2: TenderTerbatas,
           modal2: 4,
-
+          
           //   card 3
           titleCard3: "PENUNJUKKAN LANGSUNG",
           persentase3: 30,
           paket3: 45,
           nominal3: 20000000,
           icon3: SelectOutlined,
-
+          
           //   card 4
           titleCard4: "CHART PEMBELIAN LANGSUNG",
+          ChartCard4: PenunjukkanLangsung,
           modal4: 5,
-
+          
           //   card 5
           titleCard5: "CHART (TENDER VS PEMBELIAN LANGSUNG)",
+          ChartCard5: TenderPenunjukkanLangsung,
           modal5: 6,
         },
       ].map((item, index) => (
@@ -129,7 +137,9 @@ export default function CardIsi() {
               <div className="container">
                 <div className="container-top-card">
                   <p className="title">{item.titleCard1}</p>
-                  <p className="persentase">{item.persentase1}%</p>
+                  <p className="persentase">
+                    <CountUp end={item.persentase1} duration={2} />%
+                  </p>
                 </div>
                 <div className="container-row-2">
                   <item.icon1
@@ -139,10 +149,15 @@ export default function CardIsi() {
                       marginBottom: 40,
                     }}
                   />
-                  <h2 className="paket">{item.paket1} Paket</h2>
+                  <h2 className="paket">
+                    <CountUp end={item.paket1} duration={2} /> Paket
+                  </h2>
                 </div>
                 <div className="text-paket">
-                  <h2 className="nominal">Rp.{item.nominal1}</h2>
+                  <h2 className="nominal">
+                    Rp.
+                    <CountUp end={item.nominal1} duration={2} />
+                  </h2>
                 </div>
               </div>
             </Card>
@@ -169,7 +184,7 @@ export default function CardIsi() {
                     Lihat Detail
                   </Button>
                 </div>
-                <InvestasiRealRupa detailMode={false} />
+                {React.createElement(item.ChartCard2, { detailMode: false })}
               </div>
             </Card>
           </Col>
@@ -186,7 +201,9 @@ export default function CardIsi() {
               <div className="container">
                 <div className="container-top-card">
                   <p className="title">{item.titleCard3}</p>
-                  <p className="persentase">{item.persentase3}%</p>
+                  <p className="persentase">
+                    <CountUp end={item.persentase3} duration={2} />%
+                  </p>
                 </div>
                 <div className="container-row-2">
                   <item.icon3
@@ -196,10 +213,15 @@ export default function CardIsi() {
                       marginBottom: 40,
                     }}
                   />
-                  <h2 className="paket">{item.paket3} Paket</h2>
+                  <h2 className="paket">
+                    <CountUp end={item.paket3} duration={2} /> Paket
+                  </h2>
                 </div>
                 <div className="text-paket">
-                  <h2 className="nominal">Rp.{item.nominal3}</h2>
+                  <h2 className="nominal">
+                    Rp.
+                    <CountUp end={item.nominal3} duration={2} />
+                  </h2>
                 </div>
               </div>
             </Card>
@@ -226,7 +248,7 @@ export default function CardIsi() {
                     Lihat Detail
                   </Button>
                 </div>
-                <EksploitasiRealRupa detailMode={false} />
+                {React.createElement(item.ChartCard4, { detailMode: false })}
               </div>
             </Card>
           </Col>
@@ -256,7 +278,7 @@ export default function CardIsi() {
                     Lihat Detail
                   </Button>
                 </div>
-                <InvestasiEksploitasi detailMode={false} />
+                {React.createElement(item.ChartCard5, { detailMode: false })}
               </div>
             </Card>
           </Col>

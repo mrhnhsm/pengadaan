@@ -8,7 +8,7 @@ const TenderPenunjukkanLangsung = ({ detailMode = false }) => {
       backgroundColor: "transparent",
       plotBackgroundColor: "transparent",
       height: detailMode ? 650 : 560, 
-      width: detailMode ? 650 : 1500, 
+      width: detailMode ? 900 : 1500, 
     },
     
     tooltip: {
@@ -43,7 +43,7 @@ const TenderPenunjukkanLangsung = ({ detailMode = false }) => {
         name: "Anggaran",
         colorByPoint: true,
         data: [
-          { name: "Investasi", y: 60 },
+          { name: "Investasi", y: 50 },
           { name: "Eksploitasi", y: 40 },
         ],
       },

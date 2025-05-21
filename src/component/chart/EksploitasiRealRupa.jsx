@@ -51,7 +51,7 @@ const EksploitasiRealRupa = ({ detailMode = false }) => {
         name: "Anggaran",
         colorByPoint: true,
         data: [
-          { name: "Eksploitasi", y: 60 },
+          { name: "Eksploitasi", y: 10 },
           { name: "Eksploitasi", y: 10 },
         ],
       },

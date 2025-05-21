@@ -7,6 +7,7 @@ import {
   TableBidang,
   TableWilayah,
 } from "../../../component/table/Table";
+import CountUp from 'react-countup';
 
 export function NamaVendor() {
   return (

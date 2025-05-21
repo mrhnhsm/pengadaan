@@ -27,3 +27,39 @@
 .custom-dropdown .ant-select-item-option:hover {
   background-color: #f0f5ff !important;
 }
+
+
+
+.custom-dropdown-excel {
+  width: 82vw;
+  /* height: 200px; */
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: xx-large;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  /* margin-bottom: 80px; */
+}
+
+.custom-dropdown-excel .ant-select-selector {
+  border-radius: 8px !important;
+  padding: 8px 12px !important;
+  height: 43px !important;
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+}
+
+.custom-dropdown-excel .ant-select-arrow {
+  color: black;
+  
+}
+
+.custom-dropdown-excel .ant-select-item-option-selected {
+  background-color: #e6f7ff !important;
+  font-weight: bold;
+}
+
+.custom-dropdown-excel .ant-select-item-option:hover {
+  background-color: #f0f5ff !important;
+}

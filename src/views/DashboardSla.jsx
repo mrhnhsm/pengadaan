@@ -3,8 +3,12 @@ import { Card, Col, Row } from "antd";
 import "../assets/css/card.css";
 import "../assets/css/chart.css";
 import "../assets/css/cardSla.css";
-import { NamaVendor, Wilayah, Bidang } from "../component/card/Dashboard-Utama/CardSla";
-import DropdownSla from "../component/DropdownSla";
+import {
+  NamaVendor,
+  Wilayah,
+  Bidang,
+} from "../component/card/Dashboard-Utama/CardSla";
+import { DropdownSla } from "../component/dropdown/DropdownComponent";
 
 export default function DashboardSla() {
   const [selectedOption, setSelectedOption] = useState("vendor");
