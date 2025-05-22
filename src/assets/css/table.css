@@ -4,6 +4,7 @@
   padding: 2px 19px; /* cukup rapat, tapi tetap terbaca */
   font-size: 12px;
   line-height: 2.2;
+  border-radius: 10px;
 }
 
 .very-compact-table .ant-table {
@@ -21,6 +22,34 @@
   color: white;
   font-weight: bold;
   text-align: center;
+}
+
+.chart-table {
+  display: flex;
+  /* gap: 10vw; */
+  align-items: flex-start; /* biar rata atas */
+}
+
+.chart-container {
+  flex: 1; /* chart ambil setengah */
+  min-width: 0; /* biar responsive */
+}
+
+.table-container {
+  flex: 1; /* table ambil setengah */
+  min-width: 0;
+}
+
+.table-wrapper {
+  border: 1px solid #e0e0e0; /* opsional */
+  border-radius: 16px; /* atau 999px buat super bulet */
+  overflow: hidden; /* ini penting biar table-nya nggak bocor keluar radius */
+  background-color: #fff; /* opsional */
+}
+
+.table-wrapper .ant-table-cell {
+  padding: 1px 8px !important; /* default-nya 8px 16px di small */
+  font-size: 18px; /* perkecil font */
 }
 
 

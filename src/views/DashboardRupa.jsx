@@ -14,7 +14,7 @@ export default function DashboardRupa() {
   return (
     <div>
       <div>
-        <h1>RATA-RATA PENYELESAIAN PAKET SESUAI SLA</h1>
+        <h1 style={{color:"black"}}>RATA-RATA PENYELESAIAN PAKET SESUAI SLA</h1>
       </div>
       <TopCardGroupRupa/>
       <CardRupa/>

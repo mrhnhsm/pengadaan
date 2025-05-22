@@ -16,19 +16,18 @@ export default function TopCardGroup () {
           <Card
             className="top-card"
             style={{
-              marginBottom: 16,
               height: "30vh",
               overflow: "hidden",
             }}
           >
             <div className="container">
               <div className="container-top-card">
-                <p className="title">{item.title}</p>
+                <p className="title-topgroup">{item.title}</p>
                 <p className="show-icon">
                   <LineChartOutlined />
                 </p>
               </div>
-              <div className="container-row-2">
+              <div className="container-row-2" style={{color:"white"}}>
                 <h1>|</h1>
                 <h1><CountUp end={item.value} duration={2} />%</h1>
                 <h1>|</h1>

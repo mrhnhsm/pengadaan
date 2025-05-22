@@ -4,7 +4,7 @@ const ApplicationContext = createContext();
 
 export default function AppContextProvider({ children }) {
   const [loged, setLoged] = useState(""); //Verify User ID
-  const [route, setRoute] = useState("dashboard");
+  const [route, setRoute] = useState("dashboardUtama");
   console.log(route);
 
   //Handling Route

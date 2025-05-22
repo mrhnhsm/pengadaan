@@ -7,10 +7,13 @@ const InvestasiEksploitasi = ({ detailMode = false }) => {
       type: "pie",
       backgroundColor: "transparent",
       plotBackgroundColor: "transparent",
-      height: detailMode ? 650 : 560, 
-      width: detailMode ? 900 : 1500,
+      height: detailMode ? 650 : 600,
+      width: detailMode ? 900 : 650,
     },
-    
+
+    title: {
+      text: null, // atau "" juga boleh
+    },
     tooltip: {
       pointFormat: "{series.name}: <b>{point.percentage:.1f}%</b>",
       backgroundColor: "#ffffff",

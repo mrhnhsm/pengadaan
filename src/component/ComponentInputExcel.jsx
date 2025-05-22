@@ -13,7 +13,7 @@ const { Text } = Typography;
 export function Select() {
   return (
     <h1 style={{ color: "black" }}>
-      Silakan pilih jenis data melalui dropdown di atas (RUPA/PENGADAAN).
+      Silakan pilih jenis Scheduler melalui dropdown di atas (RUPA/PENGADAAN).
     </h1>
   );
 }
@@ -115,25 +115,20 @@ export function InputRupa() {
         }
         style={{ width: "87%" }}
       >
+        <h5>Button Scheduler RUPA: </h5>
         <Space direction="vertical" size="middle" style={{ width: "100%" }}>
-          <Upload {...uploadProps}>
-            <Button type="primary" icon={<UploadOutlined />}>
-              Pilih File Excel RUPA
-            </Button>
-          </Upload>
-
           {selectedFile && (
             <Text type="secondary">
               <FileExcelOutlined style={{ marginRight: 4 }} />
               {selectedFile.name}
             </Text>
           )}
-          <Space direction="horizontal" size={1300}>
+          <Space direction="horizontal" size={100}>
             <Button
               type="default"
               icon={<SaveOutlined />}
               onClick={handleSave}
-              disabled={!selectedFile}
+              // disabled={!selectedFile}
             >
               Simpan
             </Button>
@@ -141,7 +136,7 @@ export function InputRupa() {
               type="default"
               icon={<SaveOutlined />}
               onClick={handleSave}
-              disabled={!selectedFile}
+              // disabled={!selectedFile}
             >
               Simpan
             </Button>

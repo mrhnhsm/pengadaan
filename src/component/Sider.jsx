@@ -1,20 +1,27 @@
 import React, { useContext } from "react";
-import { AppstoreOutlined, FileDoneOutlined, FileImageOutlined, UploadOutlined } from "@ant-design/icons";
+import {
+  AppstoreOutlined,
+  FileDoneOutlined,
+  FileImageOutlined,
+  UploadOutlined,
+} from "@ant-design/icons";
 import { Layout, Menu } from "antd";
 import { AppContext } from "../context/AppContext";
 import LogoPtpn from "../assets/img/PTPN-4.png";
-import "../assets/css/sider.css"
+import "../assets/css/sider.css";
+
 const { Sider } = Layout;
 
 const SideBar = ({ collapsed, setCollapsed }) => {
   const { handleRoute, route } = useContext(AppContext);
+
   return (
     <Sider
       collapsible
       collapsed={collapsed}
       onCollapse={(value) => setCollapsed(value)}
       style={{
-        backgroundColor: "#287d70",
+        backgroundColor: "#d1fae5", // Sage green
         position: "fixed",
         left: 0,
         top: 0,
@@ -24,7 +31,7 @@ const SideBar = ({ collapsed, setCollapsed }) => {
       width="12vw"
       collapsedWidth={80}
       breakpoint="lg"
-      theme="dark"
+      theme="light"
     >
       <div
         style={{
@@ -34,9 +41,8 @@ const SideBar = ({ collapsed, setCollapsed }) => {
           padding: "16px",
           flexDirection: "row",
           gap: 10,
-          // transition: "all 0.8s ease",
         }}
-        >
+      >
         <img
           src={LogoPtpn}
           alt="Company Logo"
@@ -45,15 +51,16 @@ const SideBar = ({ collapsed, setCollapsed }) => {
             height: "40px",
             marginBottom: "8px",
           }}
-          />
+        />
         {!collapsed && (
           <h3
-          style={{
-            color: "white",
-            fontSize: "14px",
-            margin: 0,
-            textAlign: "left",
-          }}
+            style={{
+              color: "#065f46", // teks hijau gelap
+              fontSize: "14px",
+              margin: 0,
+              textAlign: "left",
+              fontWeight: "bold",
+            }}
           >
             Dashboard <br />
             Pengadaan Vendor
@@ -64,12 +71,13 @@ const SideBar = ({ collapsed, setCollapsed }) => {
       <Menu
         style={{
           height: "100%",
-          backgroundColor: "#287d70",
+          backgroundColor: "#d1fae5", // Sage green
           padding: 10,
           width: "100%",
-          fontSize:17,
+          fontSize: 17,
+          color: "#065f46",
         }}
-        theme="dark"
+        theme="light"
         mode="inline"
         onClick={(e) => handleRoute(e.key)}
         defaultSelectedKeys={[route]}
@@ -77,22 +85,22 @@ const SideBar = ({ collapsed, setCollapsed }) => {
         items={[
           {
             key: "inputExcel",
-            icon: <UploadOutlined />,
+            icon: <UploadOutlined style={{ color: "#065f46" }} />,
             label: "Input Excel",
           },
           {
             key: "dashboardUtama",
-            icon: <AppstoreOutlined />,
+            icon: <AppstoreOutlined style={{ color: "#065f46" }} />,
             label: "Dashboard Utama",
           },
           {
             key: "Dashboardrupa",
-            icon: <FileImageOutlined />,
+            icon: <FileImageOutlined style={{ color: "#065f46" }} />,
             label: "Rupa",
           },
           {
             key: "Dashboardsla",
-            icon: <FileDoneOutlined />,
+            icon: <FileDoneOutlined style={{ color: "#065f46" }} />,
             label: "SLA",
           },
         ]}

@@ -25,7 +25,7 @@ export function DropdownInputExcel({ onChange }){
       className="custom-dropdown-excel"
       onChange={onChange}
     >
-      <Option value="select">Pilih Jenis Excel</Option>
+      <Option value="select">Pilih Jenis Scheduler</Option>
       <Option value="RUPA">RUPA</Option>
       <Option value="PENGADAAN">BAGIAN PENGADAAN</Option>
     </Select>

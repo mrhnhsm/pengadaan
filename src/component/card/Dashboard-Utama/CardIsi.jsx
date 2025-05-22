@@ -13,6 +13,9 @@ import EksploitasiRealRupa from "../../chart/EksploitasiRealRupa";
 import TenderTerbatas from "../../chart/TenderTerbatas";
 import PenunjukkanLangsung from "../../chart/PenunjukkanLangsung";
 import TenderPenunjukkanLangsung from "../../chart/TenderPenunjukkanLangsung";
+import { TableChartTest, TableNamaVendor } from "../../table/Table";
+import "../../../assets/css/table.css";
+import "../../../assets/css/chart.css";
 console.log({
   InvestasiEksploitasi,
   InvestasiRealRupa,
@@ -44,7 +47,7 @@ export default function CardIsi() {
     switch (modalContent) {
       case 1:
         return <InvestasiRealRupa detailMode={true} />;
-        case 2:
+      case 2:
         // return <InvestasiRealRupa detailMode={true} />;
         return <EksploitasiRealRupa detailMode={true} />;
       case 3:
@@ -75,21 +78,21 @@ export default function CardIsi() {
           titleCard2: "CHART INVESTASI",
           ChartCard2: InvestasiRealRupa,
           modal2: 1,
-          
+
           //   card 3
           titleCard3: "EKSPLOITASI",
           persentase3: 30,
           paket3: 45,
           nominal3: 20000000,
           icon3: ToolOutlined,
-          
+
           //   card 4
           titleCard4: "CHART EKSPLOITASI",
           ChartCard4: EksploitasiRealRupa,
           modal4: 2,
-          
+
           //   card 5
-          titleCard5: "CHART (INVESTASI VS EKSPLOITASI)",
+          titleCard5: "INVESTASI VS EKSPLOITASI",
           ChartCard5: InvestasiEksploitasi,
           modal5: 3,
         },
@@ -100,63 +103,62 @@ export default function CardIsi() {
           paket1: 25,
           nominal1: 50000000,
           icon1: AuditOutlined,
-          
+
           //   card 2
           titleCard2: "CHART TENDER TERBATAS",
           ChartCard2: TenderTerbatas,
           modal2: 4,
-          
+
           //   card 3
           titleCard3: "PENUNJUKKAN LANGSUNG",
           persentase3: 30,
           paket3: 45,
           nominal3: 20000000,
           icon3: SelectOutlined,
-          
+
           //   card 4
           titleCard4: "CHART PEMBELIAN LANGSUNG",
           ChartCard4: PenunjukkanLangsung,
           modal4: 5,
-          
+
           //   card 5
-          titleCard5: "CHART (TENDER VS PEMBELIAN LANGSUNG)",
+          titleCard5: "TENDER VS PEMBELIAN LANGSUNG",
           ChartCard5: TenderPenunjukkanLangsung,
           modal5: 6,
         },
       ].map((item, index) => (
         <Row gutter={10} style={{ marginBottom: "2vh" }} key={index}>
-          <Col span={11}>
+          <Col span={6}>
             <Card
               className="card-hover"
               style={{
-                backgroundColor: "#2c3e50",
-                marginBottom: 16,
+                backgroundColor: "#e0f2fe",
                 overflow: "hidden",
               }}
             >
               <div className="container">
                 <div className="container-top-card">
                   <p className="title">{item.titleCard1}</p>
+                  <item.icon1
+                    style={{
+                      fontSize: "2rem",
+                      marginLeft: "10%",
+                      marginBottom: 40,
+                      color: "black",
+                    }}
+                  />
+                </div>
+                <div className="container-row-2">
+                  <h2 className="paket">
+                    <CountUp end={item.paket1} duration={2} /> Paket
+                  </h2>
                   <p className="persentase">
                     <CountUp end={item.persentase1} duration={2} />%
                   </p>
                 </div>
-                <div className="container-row-2">
-                  <item.icon1
-                    style={{
-                      fontSize: "6vh",
-                      marginLeft: "10%",
-                      marginBottom: 40,
-                    }}
-                  />
-                  <h2 className="paket">
-                    <CountUp end={item.paket1} duration={2} /> Paket
-                  </h2>
-                </div>
                 <div className="text-paket">
                   <h2 className="nominal">
-                    Rp.
-                    <CountUp end={item.nominal1} duration={2} />
+                    Rp <CountUp end={item.nominal1} duration={2} />
                   </h2>
                 </div>
               </div>
@@ -165,8 +167,7 @@ export default function CardIsi() {
             <Card
               className="card-hover"
               style={{
-                backgroundColor: "#2c3e50",
-                marginBottom: 16,
+                backgroundColor: "#fef08a",
                 overflow: "hidden",
               }}
             >
@@ -188,39 +189,71 @@ export default function CardIsi() {
               </div>
             </Card>
           </Col>
-
-          <Col span={10}>
+          <Col span={9}>
             <Card
               className="card-hover"
               style={{
-                backgroundColor: "#2c3e50",
-                marginBottom: 16,
+                backgroundColor: "#dcfce7",
+                height: "73.5vh",
+                overflow: "hidden",
+              }}
+            >
+              <div className="container">
+                <div className="container-top-card">
+                  <p className="title">
+                    CHART
+                    <br />
+                    {item.titleCard5}
+                  </p>
+                  <Button
+                    className="detail-btn"
+                    type="primary"
+                    onClick={() => showModal(item.modal5)}
+                  >
+                    Lihat Detail
+                  </Button>
+                </div>
+                <div className="chart-table">
+                  <div className="chart-container">
+                    {React.createElement(item.ChartCard5, {
+                      detailMode: false,
+                    })}
+                  </div>
+                </div>
+              </div>
+            </Card>
+          </Col>
+          <Col span={6}>
+            <Card
+              className="card-hover"
+              style={{
+                backgroundColor: "#fbcfe8",
                 overflow: "hidden",
               }}
             >
               <div className="container">
                 <div className="container-top-card">
                   <p className="title">{item.titleCard3}</p>
-                  <p className="persentase">
-                    <CountUp end={item.persentase3} duration={2} />%
-                  </p>
-                </div>
-                <div className="container-row-2">
                   <item.icon3
                     style={{
-                      fontSize: "6vh",
+                      color: "black",
+                      fontSize: "2rem",
                       marginLeft: "10%",
                       marginBottom: 40,
                     }}
                   />
+                </div>
+                <div className="container-row-2">
                   <h2 className="paket">
                     <CountUp end={item.paket3} duration={2} /> Paket
                   </h2>
+                  <p className="persentase">
+                    <CountUp end={item.persentase3} duration={2} />%
+                  </p>
                 </div>
                 <div className="text-paket">
                   <h2 className="nominal">
-                    Rp.
-                    <CountUp end={item.nominal3} duration={2} />
+                    Rp <CountUp end={item.nominal3} duration={2} />
                   </h2>
                 </div>
               </div>
@@ -229,8 +262,7 @@ export default function CardIsi() {
             <Card
               className="card-hover"
               style={{
-                backgroundColor: "#2c3e50",
-                marginBottom: 16,
+                backgroundColor: "#f5f0ff",
                 overflow: "hidden",
               }}
             >
@@ -252,36 +284,6 @@ export default function CardIsi() {
               </div>
             </Card>
           </Col>
-
-          <Col span={21}>
-            <Card
-              className="card-hover"
-              style={{
-                backgroundColor: "#2c3e50",
-                marginBottom: 16,
-                height: "75vh",
-                overflow: "hidden",
-              }}
-            >
-              <div className="container">
-                <div className="container-top-card">
-                  <p className="title">
-                    CHART
-                    <br />
-                    {item.titleCard5}
-                  </p>
-                  <Button
-                    className="detail-btn"
-                    type="primary"
-                    onClick={() => showModal(item.modal5)}
-                  >
-                    Lihat Detail
-                  </Button>
-                </div>
-                {React.createElement(item.ChartCard5, { detailMode: false })}
-              </div>
-            </Card>
-          </Col>
         </Row>
       ))}
       <Modal
@@ -291,7 +293,7 @@ export default function CardIsi() {
         onCancel={handleCancel}
         width={900}
         styles={{
-          body: { backgroundColor: "#2c3e50", height: "70vh" },
+          body: { backgroundColor: "#FDEDFD", height: "70vh" },
         }}
       >
         {renderModalContent()}

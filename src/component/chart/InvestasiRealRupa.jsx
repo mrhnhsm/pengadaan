@@ -10,11 +10,7 @@ const InvestasiRealRupa = ({ detailMode = false }) => {
       height: detailMode ? 650 : 250,
     },
     title: {
-      text: detailMode ? "Distribusi Anggaran Detail" : "",
-      style: {
-        color: "#ffffff",
-        fontSize: detailMode ? "20px" : "6px",
-      },
+      text: null, // atau "" juga boleh
     },
     tooltip: {
       pointFormat: "{series.name}: <b>{point.percentage:.1f}%</b>",

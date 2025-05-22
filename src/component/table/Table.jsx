@@ -188,3 +188,101 @@ export function TableWilayah() {
     </div>
   );
 }
+const columnsChartTest = [
+  {
+    title: "NO",
+    dataIndex: "no",
+    key: "no",
+    render: (text, record, index) => index + 1,
+    width: 50,
+    align: "center",
+  },
+  { title: "NOMOR PK", dataIndex: "nomor_pk", key: "nomor_pk" },
+  { title: "NAMA PAKET", dataIndex: "nama_paket", key: "nama_paket" },
+];
+
+const dataChartTest = [
+  {
+    key: "1",
+    nomor_pk: "Andi",
+    nama_paket: 25,
+  },
+  {
+    key: "2",
+    nomor_pk: "Budi",
+    nama_paket: 26,
+    
+  },
+  {
+    key: "3",
+    nomor_pk: "Cici",
+    nama_paket: 27,
+  },
+  {
+    key: "4",
+    nomor_pk: "Cici",
+    nama_paket: 27,
+  },
+  {
+    key: "5",
+    nomor_pk: "Cici",
+    nama_paket: 27,
+  },
+  {
+    key: "6",
+    nomor_pk: "Cici",
+    nama_paket: 27,
+  },
+  {
+    key: "7",
+    nomor_pk: "Cici",
+    nama_paket: 27,
+  },
+  {
+    key: "8",
+    nomor_pk: "Cici",
+    nama_paket: 27,
+  },
+  {
+    key: "9",
+    nomor_pk: "Cici",
+    nama_paket: 27,
+  },
+  {
+    key: "10",
+    nomor_pk: "Cici",
+    nama_paket: 27,
+  },
+  {
+    key: "11",
+    nomor_pk: "Cici",
+    nama_paket: 27,
+  },
+  {
+    key: "12",
+    nomor_pk: "Cici",
+    nama_paket: 27,
+  },
+  {
+    key: "13",
+    nomor_pk: "Cici",
+    nama_paket: 27,
+      width: 80,
+  },
+  // tambahkan data lagi untuk melihat pagination bekerja
+];
+
+export function TableChartTest() {
+  return (
+    <div className="table-wrapper">
+      <Table
+        bordered
+        columns={columnsChartTest}
+        dataSource={dataChartTest}
+        size=""
+        scroll={{ x: true }} // aktifkan scroll horizontal jika perlu
+        pagination={{ pageSize: 10 }}
+      />
+    </div>
+  );
+}

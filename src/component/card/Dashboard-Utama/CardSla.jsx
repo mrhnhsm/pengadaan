@@ -27,7 +27,7 @@ export function NamaVendor() {
                 <p className="title">NAMA VENDOR</p>
               </div>
               <div className="persentase-sla">
-                <h1>PT. Sejahtera Abadi</h1>
+                <h1 style={{color:"white"}}>PT. Sejahtera Abadi</h1>
               </div>
             </div>
           </Card>
@@ -47,7 +47,7 @@ export function NamaVendor() {
                 <p className="title">JUMLAH PAKET</p>
               </div>
               <div className="persentase-sla">
-                <h1>20 PAKET</h1>
+                <h1 style={{color:"white"}}>20 PAKET</h1>
               </div>
             </div>
           </Card>
@@ -67,7 +67,7 @@ export function NamaVendor() {
                 <p className="title">NILAI PAKET</p>
               </div>
               <div className="persentase-sla">
-                <h1>RP.200.000</h1>
+                <h1 style={{color:"white"}}>RP.200.000</h1>
               </div>
             </div>
           </Card>
@@ -96,7 +96,7 @@ export function Bidang() {
                 <p className="title">BIDANG</p>
               </div>
               <div className="persentase-sla">
-                <h1>Transportasi</h1>
+                <h1 style={{color:"white"}}>Transportasi</h1>
               </div>
             </div>
           </Card>
@@ -116,7 +116,7 @@ export function Bidang() {
                 <p className="title">JUMLAH PAKET</p>
               </div>
               <div className="persentase-sla">
-                <h1>20 PAKET</h1>
+                <h1 style={{color:"white"}}>20 PAKET</h1>
               </div>
             </div>
           </Card>
@@ -136,7 +136,7 @@ export function Bidang() {
                 <p className="title">NILAI PAKET</p>
               </div>
               <div className="persentase-sla">
-                <h1>RP.200.000</h1>
+                <h1 style={{color:"white"}}>RP.200.000</h1>
               </div>
             </div>
           </Card>
@@ -166,7 +166,7 @@ export function Wilayah(){
                 <p className="title">WILAYAH</p>
               </div>
               <div className="persentase-sla">
-                <h1>Adolina</h1>
+                <h1 style={{color:"white"}}>Adolina</h1>
               </div>
             </div>
           </Card>
@@ -186,7 +186,7 @@ export function Wilayah(){
                 <p className="title">JUMLAH PAKET</p>
               </div>
               <div className="persentase-sla">
-                <h1>20 PAKET</h1>
+                <h1 style={{color:"white"}}>20 PAKET</h1>
               </div>
             </div>
           </Card>
@@ -206,7 +206,7 @@ export function Wilayah(){
                 <p className="title">NILAI PAKET</p>
               </div>
               <div className="persentase-sla">
-                <h1>RP.200.000</h1>
+                <h1 style={{color:"white"}}>RP.200.000</h1>
               </div>
             </div>
           </Card>

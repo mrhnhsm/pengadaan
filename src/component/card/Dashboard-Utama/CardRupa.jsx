@@ -104,14 +104,13 @@ export default function CardIsi() {
         },
       ].map((item, index) => (
         <div key={index}>
-          <h1>{item.title}</h1>
+          <h1 style={{color:"black"}}>{item.title}</h1>
           <Row gutter={10} style={{ marginBottom: "2vh" }}>
             <Col span={11}>
               <Card
                 className="card-hover"
                 style={{
-                  backgroundColor: "#2c3e50",
-                  marginBottom: 16,
+                  backgroundColor: "#e0f2fe",
                   overflow: "hidden",
                 }}
               >
@@ -125,7 +124,7 @@ export default function CardIsi() {
                       style={{
                         fontSize: "6vh",
                         marginLeft: "10%",
-                        marginBottom: 40,
+                        // marginBottom: 40,
                       }}
                     />
                     <h2 className="paket"><CountUp end={item.paket1} duration={2} /> Paket</h2>
@@ -139,7 +138,7 @@ export default function CardIsi() {
               <Card
                 className="card-hover"
                 style={{
-                  backgroundColor: "#2c3e50",
+                  backgroundColor: "#fef08a",
                   marginBottom: 16,
                   overflow: "hidden",
                 }}
@@ -167,7 +166,7 @@ export default function CardIsi() {
               <Card
                 className="card-hover"
                 style={{
-                  backgroundColor: "#2c3e50",
+                  backgroundColor: "#fbcfe8",
                   marginBottom: 16,
                   overflow: "hidden",
                 }}
@@ -196,7 +195,7 @@ export default function CardIsi() {
               <Card
                 className="card-hover"
                 style={{
-                  backgroundColor: "#2c3e50",
+                  backgroundColor: "#f5f0ff",
                   marginBottom: 16,
                   overflow: "hidden",
                 }}

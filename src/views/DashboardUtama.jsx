@@ -9,7 +9,7 @@ export default function DashboardUtama() {
   return (
     <div>
       {/* baris pertama */}
-      <div >
+      <div style={{color:"black"}} >
         <h1>EFISIENSI PENGADAAN DAN PROCUREMENT EXCELLENCE</h1>
       </div>
       <TopCardGroup/>

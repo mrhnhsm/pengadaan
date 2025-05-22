@@ -30,15 +30,16 @@ const App = () => {
             width: "100%",
             zIndex: 1000,
             padding: 0,
-            background: colorBgContainer,
+            backgroundColor: "#FBFFF5",
           }}
         >
           <div className="header">
             <div className="date-filter">
+              <p style={{color:"white"}}>Filter Data:</p>
               <RangePicker
                 placeholder={["Start Date", "End Date"]}
                 onChange={handleRangeChange}
-                style={{ width: 290}}
+                style={{ width: 890,  marginRight:200, border:"none", color:"black"}}
               />
               <button className="profile">
                 <UserOutlined />
@@ -49,18 +50,18 @@ const App = () => {
         </Header>
         <Content
           style={{
-            marginTop: 100,
+            marginTop:100,
           }}
         >
           <div
             style={{
-              marginLeft: collapsed ? 80 : "12vw", 
+              marginLeft: collapsed ? 80 : "11.5vw", 
               transition: "margin-left 0.3s ease, width 0.3s ease " ,
               padding: 30,
               minHeight: 800,
               width: collapsed ? "109vw" : "100vw",
-              background: colorBgContainer,
-              borderRadius: borderRadiusLG,
+              backgroundColor: "#FBFFF5",
+              // borderRadius: borderRadiusLG,
             }}
           >
             <Routes />
