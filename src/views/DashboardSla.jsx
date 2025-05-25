@@ -28,7 +28,7 @@ export default function DashboardSla() {
 
   return (
     <div>
-      <h1 style={{color:"white"}}>RATA-RATA PENYELESAIAN PAKET SESUAI SLA</h1>
+      <h1 style={{color:"black"}}>RATA-RATA PENYELESAIAN PAKET SESUAI SLA</h1>
       <DropdownSla onChange={setSelectedOption} />
       {renderContent()}
     </div>

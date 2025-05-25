@@ -17,7 +17,7 @@ export function NamaVendor() {
           <Card
             className="card-hover"
             style={{
-              backgroundColor: "#2c3e50",
+              backgroundColor: "#e0f2fe",
               marginBottom: 16,
               overflow: "hidden",
             }}
@@ -27,7 +27,7 @@ export function NamaVendor() {
                 <p className="title">NAMA VENDOR</p>
               </div>
               <div className="persentase-sla">
-                <h1 style={{color:"white"}}>PT. Sejahtera Abadi</h1>
+                <h1 className="isi-card-sla">PT. Sejahtera Abadi</h1>
               </div>
             </div>
           </Card>
@@ -37,7 +37,7 @@ export function NamaVendor() {
           <Card
             className="card-hover"
             style={{
-              backgroundColor: "#2c3e50",
+              backgroundColor: "#fef08a",
               marginBottom: 16,
               overflow: "hidden",
             }}
@@ -47,7 +47,7 @@ export function NamaVendor() {
                 <p className="title">JUMLAH PAKET</p>
               </div>
               <div className="persentase-sla">
-                <h1 style={{color:"white"}}>20 PAKET</h1>
+                <h1 className="isi-card-sla">20 PAKET</h1>
               </div>
             </div>
           </Card>
@@ -57,7 +57,7 @@ export function NamaVendor() {
           <Card
             className="card-hover"
             style={{
-              backgroundColor: "#2c3e50",
+              backgroundColor: "#dcfce7",
               marginBottom: 16,
               overflow: "hidden",
             }}
@@ -67,7 +67,7 @@ export function NamaVendor() {
                 <p className="title">NILAI PAKET</p>
               </div>
               <div className="persentase-sla">
-                <h1 style={{color:"white"}}>RP.200.000</h1>
+                <h1 className="isi-card-sla">RP.200.000</h1>
               </div>
             </div>
           </Card>
@@ -86,7 +86,7 @@ export function Bidang() {
           <Card
             className="card-hover"
             style={{
-              backgroundColor: "#2c3e50",
+              backgroundColor: "#e0f2fe",
               marginBottom: 16,
               overflow: "hidden",
             }}
@@ -96,7 +96,7 @@ export function Bidang() {
                 <p className="title">BIDANG</p>
               </div>
               <div className="persentase-sla">
-                <h1 style={{color:"white"}}>Transportasi</h1>
+                <h1 className="isi-card-sla">Transportasi</h1>
               </div>
             </div>
           </Card>
@@ -106,7 +106,7 @@ export function Bidang() {
           <Card
             className="card-hover"
             style={{
-              backgroundColor: "#2c3e50",
+              backgroundColor: "#fef08a",
               marginBottom: 16,
               overflow: "hidden",
             }}
@@ -116,7 +116,7 @@ export function Bidang() {
                 <p className="title">JUMLAH PAKET</p>
               </div>
               <div className="persentase-sla">
-                <h1 style={{color:"white"}}>20 PAKET</h1>
+                <h1 className="isi-card-sla">20 PAKET</h1>
               </div>
             </div>
           </Card>
@@ -126,7 +126,7 @@ export function Bidang() {
           <Card
             className="card-hover"
             style={{
-              backgroundColor: "#2c3e50",
+              backgroundColor: "#dcfce7",
               marginBottom: 16,
               overflow: "hidden",
             }}
@@ -136,7 +136,7 @@ export function Bidang() {
                 <p className="title">NILAI PAKET</p>
               </div>
               <div className="persentase-sla">
-                <h1 style={{color:"white"}}>RP.200.000</h1>
+                <h1 className="isi-card-sla">RP.200.000</h1>
               </div>
             </div>
           </Card>
@@ -156,7 +156,7 @@ export function Wilayah(){
           <Card
             className="card-hover"
             style={{
-              backgroundColor: "#2c3e50",
+              backgroundColor: "#e0f2fe",
               marginBottom: 16,
               overflow: "hidden",
             }}
@@ -166,7 +166,7 @@ export function Wilayah(){
                 <p className="title">WILAYAH</p>
               </div>
               <div className="persentase-sla">
-                <h1 style={{color:"white"}}>Adolina</h1>
+                <h1 className="isi-card-sla">Adolina</h1>
               </div>
             </div>
           </Card>
@@ -176,7 +176,7 @@ export function Wilayah(){
           <Card
             className="card-hover"
             style={{
-              backgroundColor: "#2c3e50",
+              backgroundColor: "#fef08a",
               marginBottom: 16,
               overflow: "hidden",
             }}
@@ -186,7 +186,7 @@ export function Wilayah(){
                 <p className="title">JUMLAH PAKET</p>
               </div>
               <div className="persentase-sla">
-                <h1 style={{color:"white"}}>20 PAKET</h1>
+                <h1 className="isi-card-sla">20 PAKET</h1>
               </div>
             </div>
           </Card>
@@ -196,7 +196,7 @@ export function Wilayah(){
           <Card
             className="card-hover"
             style={{
-              backgroundColor: "#2c3e50",
+              backgroundColor: "#dcfce7",
               marginBottom: 16,
               overflow: "hidden",
             }}
@@ -206,7 +206,7 @@ export function Wilayah(){
                 <p className="title">NILAI PAKET</p>
               </div>
               <div className="persentase-sla">
-                <h1 style={{color:"white"}}>RP.200.000</h1>
+                <h1 className="isi-card-sla">RP.200.000</h1>
               </div>
             </div>
           </Card>

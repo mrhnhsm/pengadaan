@@ -12,3 +12,8 @@
 .table-wrapper .ant-table-tbody > tr:hover {
   background-color: #e6f7ff !important;
 }
+
+.isi-card-sla{
+  font-size: 2rem;
+  color: black;
+}

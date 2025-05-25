@@ -2,16 +2,28 @@ import { useState } from "react";
 import "../../App.css";
 import "../../assets/css/date.css";
 import Routes from "../../page/routes/Routes";
-import { Layout, theme, DatePicker } from "antd";
+import { Layout, theme, DatePicker, Menu, Dropdown } from "antd";
 import SideBar from "../../component/Sider";
-import { UserOutlined } from "@ant-design/icons";
+import { UserOutlined, LogoutOutlined } from "@ant-design/icons";
+
+import FabMenu from "../../component/fab/FabMenu";
 
 const { RangePicker } = DatePicker;
 const { Header, Content } = Layout;
 
 const App = () => {
   const [collapsed, setCollapsed] = useState(false);
-
+  const menu = (
+    <Menu>
+      <Menu.Item
+        key="logout"
+        icon={<LogoutOutlined />}
+        onClick={() => console.log("Logout clicked")}
+      >
+        Logout
+      </Menu.Item>
+    </Menu>
+  );
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
@@ -21,7 +33,11 @@ const App = () => {
   };
   return (
     <Layout>
-      <SideBar collapsed={collapsed} setCollapsed={setCollapsed} style= {{ transition:"width 5.9s ease;"}}/>
+      <SideBar
+        collapsed={collapsed}
+        setCollapsed={setCollapsed}
+        style={{ transition: "width 5.9s ease;" }}
+      />
       <Layout>
         <Header
           style={{
@@ -35,36 +51,55 @@ const App = () => {
         >
           <div className="header">
             <div className="date-filter">
-              <p style={{color:"white"}}>Filter Data:</p>
+              <p style={{ color: "white" }}>Filter Data:</p>
               <RangePicker
                 placeholder={["Start Date", "End Date"]}
                 onChange={handleRangeChange}
-                style={{ width: 890,  marginRight:200, border:"none", color:"black"}}
+                style={{
+                  width: 890,
+                  marginRight: 200,
+                  border: "none",
+                  color: "black",
+                }}
               />
-              <button className="profile">
-                <UserOutlined />
-                <p className="username">Wak leman</p>
-              </button>
+
+              <Dropdown
+                overlay={menu}
+                placement="bottomRight"
+                trigger={["click"]}
+              >
+                <button className="profile">
+                  <UserOutlined />
+                  <p className="username">Wak leman</p>
+                </button>
+              </Dropdown>
             </div>
           </div>
         </Header>
         <Content
           style={{
-            marginTop:100,
+            marginTop: 100,
+            position: "relative", // jaga-jaga kalau kamu mau pakai posisi absolute juga
           }}
         >
           <div
             style={{
-              marginLeft: collapsed ? 80 : "11.5vw", 
-              transition: "margin-left 0.3s ease, width 0.3s ease " ,
+              marginLeft: collapsed ? 80 : "11.5vw",
+              transition: "margin-left 0.3s ease, width 0.3s ease",
               padding: 30,
               minHeight: 800,
               width: collapsed ? "109vw" : "100vw",
               backgroundColor: "#FBFFF5",
-              // borderRadius: borderRadiusLG,
             }}
           >
             <Routes />
+          </div>
+          <div
+            style={{
+              zIndex: 10000,
+            }}
+          >
+            <FabMenu />
           </div>
         </Content>
       </Layout>

@@ -31,26 +31,30 @@ body{
   flex-direction: row;
   align-items: center;
   gap: 20px;
+  height: 60%;
   font-size: medium;
   margin-left: 100px;
   cursor: pointer;
   border-radius: 6px;
   color: #212529;
- background-color: #e8f5e9; /* hijau pastel, lembut dan nyaman */
-  border: 1px solid #388e3c; /* hijau muda */
-  transition: border-color 0.3s;
+  background-color: #e8f5e9;
+  border: 1px solid #388e3c;
   transition: all 0.3s ease;
 }
 
-.profile:hover {
-  background-color: #388e3c; /* hijau stabil dan tidak menyilaukan */
-  color: #ffffff;
-  transform: scale(1.05);
-  border: 1px solid #81c784; /* hijau cerah */
-  box-shadow: 0 0 6px rgba(129, 199, 132, 0.6); /* glow hijau lembut */
-
+.profile svg {
+  color: inherit;
+  transition: color 0.3s;
 }
 
-.username{
-  margin: 0;
+.profile:hover {
+  background-color: #388e3c;
+  color: white;
+  transform: scale(1.05);
+  border: 1px solid #81c784;
+  box-shadow: 0 0 6px rgba(129, 199, 132, 0.6);
+}
+
+.profile:hover svg {
+  color: white;
 }

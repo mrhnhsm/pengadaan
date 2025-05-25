@@ -1,13 +1,13 @@
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
-import "../../assets/css/chart.css";
-const PenunjukkanLansung = ({ detailMode = false }) => {
+import "../../../assets/css/chart.css";
+const NilaiPaketKso = ({ detailMode = false }) => {
 const options = {
   chart: {
     type: "pie",
     backgroundColor: "transparent",
     plotBackgroundColor: "transparent",
-    height: detailMode ? 650 : 350,
+    height: detailMode ? 650 : 250,
   },
   title: {
     text: detailMode ? "Distribusi Anggaran Detail" : "",
@@ -65,4 +65,4 @@ const options = {
   return <HighchartsReact highcharts={Highcharts} options={options} />;
 };
 
-export default PenunjukkanLansung;
+export default NilaiPaketKso;

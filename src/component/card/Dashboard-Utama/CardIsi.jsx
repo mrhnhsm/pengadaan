@@ -13,7 +13,6 @@ import EksploitasiRealRupa from "../../chart/EksploitasiRealRupa";
 import TenderTerbatas from "../../chart/TenderTerbatas";
 import PenunjukkanLangsung from "../../chart/PenunjukkanLangsung";
 import TenderPenunjukkanLangsung from "../../chart/TenderPenunjukkanLangsung";
-import { TableChartTest, TableNamaVendor } from "../../table/Table";
 import "../../../assets/css/table.css";
 import "../../../assets/css/chart.css";
 console.log({
@@ -194,7 +193,7 @@ export default function CardIsi() {
               className="card-hover"
               style={{
                 backgroundColor: "#dcfce7",
-                height: "73.5vh",
+                height: "76vh",
                 overflow: "hidden",
               }}
             >

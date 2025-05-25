@@ -84,11 +84,6 @@ const SideBar = ({ collapsed, setCollapsed }) => {
         selectedKeys={[route]}
         items={[
           {
-            key: "inputExcel",
-            icon: <UploadOutlined style={{ color: "#065f46" }} />,
-            label: "Input Excel",
-          },
-          {
             key: "dashboardUtama",
             icon: <AppstoreOutlined style={{ color: "#065f46" }} />,
             label: "Dashboard Utama",
