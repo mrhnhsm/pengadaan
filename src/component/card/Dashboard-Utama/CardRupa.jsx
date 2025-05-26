@@ -85,7 +85,7 @@ export default function CardIsi() {
           //   card 2
           titleCard2: "CHART PAKET KSO",
           ChartCard2: PaketKso,
-          modal2: 4,
+          modal2: 3,
 
           //   card 3
           titleCard3: "PAKET SELESAI (SD)",
@@ -97,7 +97,7 @@ export default function CardIsi() {
           //   card 4
           titleCard4: "CHART NILAI PAKET KSO",
           ChartCard4: NilaiPaketKso,
-          modal4: 5,
+          modal4: 4,
         },
       ].map((item, index) => (
         <div key={index}>
@@ -239,7 +239,7 @@ export default function CardIsi() {
         onCancel={handleCancel}
         width={900}
         styles={{
-          body: { backgroundColor: "#2c3e50", height: "70vh" },
+          body: { backgroundColor: "#F5F5F5", height: "70vh" },
         }}
       >
         {renderModalContent()}

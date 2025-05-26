@@ -1,7 +1,7 @@
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 import "../../assets/css/chart.css";
-const PenunjukkanLansung = ({ detailMode = false }) => {
+const PenunjukkanLangsung = ({ detailMode = false }) => {
 const options = {
   chart: {
     type: "pie",
@@ -10,15 +10,15 @@ const options = {
     height: detailMode ? 650 : 350,
   },
   title: {
-    text: detailMode ? "Distribusi Anggaran Detail" : "",
+    text: detailMode ? "CHART PENUNJUKKAN LANGSUNG (REAL VS RUPA)" : "",
     style: {
-      color: "#ffffff",
+      color: "#333333",
       fontSize: detailMode ? "20px" : "6px",
     },
   },
   tooltip: {
     pointFormat: "{series.name}: <b>{point.percentage:.1f}%</b>",
-    backgroundColor: "#ffffff",
+    backgroundColor: "white",
     style: {
       color: "#000000",
       fontSize: detailMode ? "14px" : "12px",
@@ -65,4 +65,4 @@ const options = {
   return <HighchartsReact highcharts={Highcharts} options={options} />;
 };
 
-export default PenunjukkanLansung;
+export default PenunjukkanLangsung;

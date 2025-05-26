@@ -10,15 +10,15 @@ const options = {
     height: detailMode ? 650 : 350,
   },
   title: {
-    text: detailMode ? "Distribusi Anggaran Detail" : "",
+    text: detailMode ? "CHART EKSPLOITASI (REAL VS RUPA)" : "",
     style: {
-      color: "#ffffff",
+      color: "#333333",
       fontSize: detailMode ? "20px" : "6px",
     },
   },
   tooltip: {
     pointFormat: "{series.name}: <b>{point.percentage:.1f}%</b>",
-    backgroundColor: "#ffffff",
+    backgroundColor: "white",
     style: {
       color: "#000000",
       fontSize: detailMode ? "14px" : "12px",

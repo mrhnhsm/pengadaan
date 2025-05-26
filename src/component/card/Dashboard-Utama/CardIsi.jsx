@@ -116,12 +116,12 @@ export default function CardIsi() {
           icon3: SelectOutlined,
 
           //   card 4
-          titleCard4: "CHART PEMBELIAN LANGSUNG",
+          titleCard4: "CHART PENUNJUKKAN LANGSUNG",
           ChartCard4: PenunjukkanLangsung,
           modal4: 5,
 
           //   card 5
-          titleCard5: "TENDER VS PEMBELIAN LANGSUNG",
+          titleCard5: "TENDER VS PENUNJUKKAN LANGSUNG",
           ChartCard5: TenderPenunjukkanLangsung,
           modal5: 6,
         },
@@ -292,7 +292,7 @@ export default function CardIsi() {
         onCancel={handleCancel}
         width={900}
         styles={{
-          body: { backgroundColor: "#FDEDFD", height: "70vh" },
+          body: { backgroundColor: "#F5F5F5", height: "70vh" },
         }}
       >
         {renderModalContent()}

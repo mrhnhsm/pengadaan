@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "antd";
 import "../../assets/css/Fabmenu.css"
-import { PlayCircleOutlined, StopOutlined, SyncOutlined, FileTextOutlined } from "@ant-design/icons";
+import { PlayCircleOutlined, StopOutlined, SyncOutlined, FileTextOutlined, PlusOutlined } from "@ant-design/icons";
 
 export default function FabMenu() {
   const [open, setOpen] = useState(false);
@@ -14,7 +14,7 @@ export default function FabMenu() {
     <>
       {/* Main FAB */}
       <Button className="fab-main" onClick={toggleMenu}>
-        +
+        <PlusOutlined style={{ fontSize: '50px' }} />
       </Button>
 
       {/* Sub-buttons */}
