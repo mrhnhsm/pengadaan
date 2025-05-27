@@ -3,14 +3,14 @@ body{
   background-color: whitesmoke; 
 }
 .ant-layout{
-  height: 100vh;
+  height: auto;
 }
 
 .header{
   display: flex;
   flex-direction: row-reverse;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-  width: 99.5vw;
+  width: auto;
   max-width: 110vw;
 
 }
@@ -22,7 +22,7 @@ body{
 .ant-layout-header{
   display: flex;
   flex-direction: column;
-  height: 11.5vh;
+  height: auto;
   background-color: whitesmoke;
 }
 
@@ -31,7 +31,7 @@ body{
   flex-direction: row;
   align-items: center;
   gap: 20px;
-  height: 60%;
+  height: auto;
   font-size: medium;
   margin-left: 100px;
   cursor: pointer;

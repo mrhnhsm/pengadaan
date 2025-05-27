@@ -8,17 +8,13 @@ export default function TopCardGroup () {
   return (
     <Row gutter={10} style={{ marginBottom: "2vh" }}>
       {[
-        { title: "TERHADAP RKAP", value: 30 },
-        { title: "TERHADAP HPS", value: 30 },
-        { title: "PROCUREMANT EXCELLENCE", value: 30 },
+        { title: "TERHADAP RKAP", value: 30, nominal:200000000 },
+        { title: "TERHADAP HPS", value: 30, nominal:200000000 },
+        { title: "PROCUREMANT EXCELLENCE", value: 30, nominal:200000000 },
       ].map((item, index) => (
         <Col span={7} key={index}>
           <Card
             className="top-card"
-            style={{
-              height: "30vh",
-              overflow: "hidden",
-            }}
           >
             <div className="container">
               <div className="container-top-card">
@@ -26,6 +22,9 @@ export default function TopCardGroup () {
                 <p className="show-icon">
                   <LineChartOutlined />
                 </p>
+              </div>
+              <div className="top-groud-card-nominal">
+                <p style={{margin:0}}>Rp <CountUp end={item.nominal} duration={2} /> </p>
               </div>
               <div className="container-row-2" style={{color:"white"}}>
                 <h1>|</h1>

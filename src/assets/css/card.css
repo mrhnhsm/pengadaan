@@ -104,7 +104,7 @@
 }
 
 .ant-modal-content{
-  width: 100vh;
+  width: auto;
 }
 
 .title-page {
@@ -114,6 +114,17 @@
 
 .top-card{
   background: linear-gradient(to right, #4e54c8, #8f94fb);
+  height: auto;
+  
+}
+
+
+.top-groud-card-nominal{
+  /* text-align: center; */
+  font-size: 3cap;
+  margin: 0;
+  color: white;
+  font-weight: bold;
 }
 
 .chart-card{
