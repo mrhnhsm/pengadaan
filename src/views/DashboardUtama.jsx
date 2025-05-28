@@ -1,4 +1,4 @@
-import "../assets/css/card.css";
+
 import "../assets/css/chart.css";
 import TopCardGroup from "../component/card/Dashboard-Utama/TopCardGroup";
 import CardIsi from "../component/card/Dashboard-Utama/CardIsi";

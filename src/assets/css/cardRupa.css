@@ -1,0 +1,80 @@
+.card-hover {
+  background-color: #f9fafb;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.card-hover:hover {
+  background: linear-gradient(to bottom right, #cbd5e1, #e2e8f0);
+  transform: scale(1.01);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.detail-btn {
+  background: linear-gradient(to right, #e0f7fa, #b2ebf2);
+  color: #004d40;
+  border: none;
+  padding: 12px 24px;
+  font-weight: bold;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.4s ease;
+}
+
+.detail-btn:hover {
+  background: linear-gradient(to right, #b2ebf2, #80deea);
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+.title-rupa {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #0f172a;
+}
+
+
+
+.persentase-rupa{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.paket-rupa{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+
+
+.middle-row-rupa {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid #cbd5e1;
+  border-bottom: 1px solid #cbd5e1;
+  padding: 10px 0;
+  margin-top: 2vh;
+}
+
+.middle-item {
+  flex: 1;
+  text-align: center;
+}
+
+.border-right {
+  border-right: 1px solid #cbd5e1;
+}
+
+.nominal-rupa {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 3.5vh;
+  font-size: 1.5rem;
+  color: #1e293b;
+}

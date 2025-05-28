@@ -15,6 +15,7 @@ import PenunjukkanLangsung from "../../chart/PenunjukkanLangsung";
 import TenderPenunjukkanLangsung from "../../chart/TenderPenunjukkanLangsung";
 import "../../../assets/css/table.css";
 import "../../../assets/css/chart.css";
+import "../../../assets/css/card.css";
 console.log({
   InvestasiEksploitasi,
   InvestasiRealRupa,
@@ -25,6 +26,20 @@ console.log({
 });
 
 export default function CardIsi() {
+  const formatNominal = (value) => {
+    if (value >= 1_000_000_000_000) {
+      return { val: value / 1_000_000_000_000, unit: "Triliun" };
+    } else if (value >= 1_000_000_000) {
+      return { val: value / 1_000_000_000, unit: "Miliar" };
+    } else if (value >= 1_000_000) {
+      return { val: value / 1_000_000, unit: "Juta" };
+    } else if (value >= 1_000) {
+      return { val: value / 1_000, unit: "Ribu" };
+    } else {
+      return { val: value, unit: "" };
+    }
+  };
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState("");
 
@@ -133,32 +148,30 @@ export default function CardIsi() {
               style={{
                 backgroundColor: "#e0f2fe",
                 overflow: "hidden",
+                borderRadius: "12px",
               }}
             >
               <div className="container">
-                <div className="container-top-card">
-                  <p className="title">{item.titleCard1}</p>
-                  <item.icon1
-                    style={{
-                      fontSize: "2rem",
-                      marginLeft: "10%",
-                      marginBottom: 40,
-                      color: "black",
-                    }}
-                  />
+                <h4 className="title-rupa">{item.titleCard1}</h4>
+
+                <div className="middle-row-rupa">
+                  <div className="middle-item border-right">
+                    <p className="paket-rupa">
+                      <CountUp end={item.paket1} duration={2} /> Paket
+                    </p>
+                  </div>
+                  <div className="middle-item">
+                    <p className="persentase-rupa">
+                      <CountUp end={item.persentase1} duration={2} />%
+                    </p>
+                  </div>
                 </div>
-                <div className="container-row-2">
-                  <h2 className="paket">
-                    <CountUp end={item.paket1} duration={2} /> Paket
-                  </h2>
-                  <p className="persentase">
-                    <CountUp end={item.persentase1} duration={2} />%
+
+                <div className="bottom-rupa">
+                  <p className="nominal-rupa">
+                    NOMINAL <br />
+                    Rp. <CountUp end={item.nominal1} duration={2} />
                   </p>
-                </div>
-                <div className="text-paket">
-                  <h2 className="nominal">
-                    Rp <CountUp end={item.nominal1} duration={2} />
-                  </h2>
                 </div>
               </div>
             </Card>
@@ -193,7 +206,7 @@ export default function CardIsi() {
               className="card-hover"
               style={{
                 backgroundColor: "#dcfce7",
-                height: "76vh",
+                height: "100%",
                 overflow: "hidden",
               }}
             >
@@ -226,34 +239,32 @@ export default function CardIsi() {
             <Card
               className="card-hover"
               style={{
-                backgroundColor: "#fbcfe8",
+                backgroundColor: "#e0f2fe",
                 overflow: "hidden",
+                borderRadius: "12px",
               }}
             >
               <div className="container">
-                <div className="container-top-card">
-                  <p className="title">{item.titleCard3}</p>
-                  <item.icon3
-                    style={{
-                      color: "black",
-                      fontSize: "2rem",
-                      marginLeft: "10%",
-                      marginBottom: 40,
-                    }}
-                  />
+                <h4 className="title-rupa">{item.titleCard3}</h4>
+
+                <div className="middle-row-rupa">
+                  <div className="middle-item border-right">
+                    <p className="paket-rupa">
+                      <CountUp end={item.paket3} duration={2} /> Paket
+                    </p>
+                  </div>
+                  <div className="middle-item">
+                    <p className="persentase-rupa">
+                      <CountUp end={item.persentase3} duration={2} />%
+                    </p>
+                  </div>
                 </div>
-                <div className="container-row-2">
-                  <h2 className="paket">
-                    <CountUp end={item.paket3} duration={2} /> Paket
-                  </h2>
-                  <p className="persentase">
-                    <CountUp end={item.persentase3} duration={2} />%
+
+                <div className="bottom-rupa">
+                  <p className="nominal-rupa">
+                    NOMINAL <br />
+                    Rp. <CountUp end={item.nominal3} duration={2} />
                   </p>
-                </div>
-                <div className="text-paket">
-                  <h2 className="nominal">
-                    Rp <CountUp end={item.nominal3} duration={2} />
-                  </h2>
                 </div>
               </div>
             </Card>
