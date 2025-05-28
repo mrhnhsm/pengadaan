@@ -7,7 +7,7 @@ const options = {
     type: "pie",
     backgroundColor: "transparent",
     plotBackgroundColor: "transparent",
-    height: detailMode ? 650 : 350,
+    height: detailMode ? 650 : 200,
   },
   title: {
     text: detailMode ? "CHART EKSPLOITASI (REAL VS RUPA)" : "",

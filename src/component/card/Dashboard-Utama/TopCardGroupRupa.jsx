@@ -1,51 +1,74 @@
-import { Row, Col, Card } from 'antd';
-import CountUp from 'react-countup';
-import '../../../assets/css/topCard.css';
+import { Row, Col, Card } from "antd";
+import "../../../assets/css/topcardrupa.css";
+import CountUp from "react-countup";
 
 export default function TopCardGroupRupa() {
+  const formatNominal = (value) => {
+    if (value >= 1_000_000_000_000) {
+      return { val: value / 1_000_000_000_000, unit: "Triliun" };
+    } else if (value >= 1_000_000_000) {
+      return { val: value / 1_000_000_000, unit: "Miliar" };
+    } else if (value >= 1_000_000) {
+      return { val: value / 1_000_000, unit: "Juta" };
+    } else if (value >= 1_000) {
+      return { val: value / 1_000, unit: "Ribu" };
+    } else {
+      return { val: value, unit: "" };
+    }
+  };
+
   return (
-    <Row
-      gutter={10}
-      style={{ marginBottom: '2vh' }}>
+    <Row gutter={10} style={{ marginBottom: "2vh" }}>
       {[
-        { title: 'RUPA SETAHUN', nominal: 200000 },
-        { title: 'PAKET SELESAI (SD)', nominal: 200000 },
-        { title: '% CAPAIAN (REAL VS RUPA)', value: 30, nominal: 200000 },
+        { title: "RUPA SETAHUN", value: 200000, paket: 30 },
+        { title: "PAKET SELESAI (SD)", value: 200000, paket: 200 },
+        { title: "% CAPAIAN (REAL VS RUPA)", value: 30, persen: 20 },
       ].map((item, index) => (
-        <Col
-          span={7}
-          key={index}>
+        <Col span={7} key={index}>
           <Card
             className="top-card"
             style={{
-              marginBottom: 16,
-              height: '22vh',
-              overflow: 'hidden',
-            }}>
+              height: "auto",
+              overflow: "hidden",
+            }}
+          >
             <div className="container">
-              <div className="container-top-card">
-                <p className="title-topcard">{item.title}</p>
-                <p className="show-icon">
-                  {item.title !== 'RUPA SETAHUN' &&
-                    item.title !== 'PAKET SELESAI (SD)' && (
-                      <p className="small-persentase">
-                        <CountUp
-                          end={item.value}
-                          duration={2}
-                        />
-                        %
-                      </p>
-                    )}
-                </p>
-              </div>
-              <div className="container-row-2">
-                <h1 style={{ color: 'white', fontSize: 30 }}>
-                  Rp{' '}
-                  <CountUp
-                    end={item.nominal}
-                    duration={2}
-                  />
-                </h1>
+              <h1 className="title-topcard">{item.title}</h1>
+
+              <div className="rupa-item-wrapper">
+                <div className="rupa-box">
+                  {item.title === "% CAPAIAN (REAL VS RUPA)" ? (
+                    <>
+                      NOMINAL <br />
+                      <CountUp end={item.value || 0} duration={2} />%
+                    </>
+                  ) : (
+                    (() => {
+                      const { val, unit } = formatNominal(item.value || 0);
+                      return (
+                        <>
+                        NOMINAL <br />
+                          Rp <CountUp end={val} decimals={1} duration={2} />{" "}
+                          {unit}
+                        </>
+                      );
+                    })()
+                  )}
+                </div>
+
+                <div className="rupa-box">
+                  {item.title === "% CAPAIAN (REAL VS RUPA)" ? (
+                    <>
+                    PAKET <br />
+                      <CountUp end={item.value || 0} duration={2} />%
+                    </>
+                  ) : (
+                    <>
+                    PAKET <br />
+                      <CountUp end={item.paket || 0} duration={2} /> Paket
+                    </>
+                  )}
+                </div>
               </div>
             </div>
           </Card>

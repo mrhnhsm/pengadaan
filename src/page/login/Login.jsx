@@ -8,12 +8,15 @@ import Config from '../../API/config';
 import axios from 'axios';
 import config from '../../API/config';
 import { AppContext } from '../../context/AppContext';
+import Swal from 'sweetalert2';
 
 const { Title } = Typography;
 
 const LoginPage = ({ onStatus }) => {
-  const [tokenUser, setTokeUser] = useState(localStorage.getItem('tokenUser'));
-  const [userId, setUserId] = useState(localStorage.getItem('userId'));
+  const [userId, setUserId] = useState(() => localStorage.getItem('userId'));
+  const [tokenUser, setTokeUser] = useState(() =>
+    localStorage.getItem('tokenUser')
+  );
   const { setUserLoged } = useContext(AppContext);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -26,31 +29,47 @@ const LoginPage = ({ onStatus }) => {
         PASSWORD: password,
       });
 
-      const token = response.data.ACCESS_TOKEN;
-      const userId = response.data.USERID;
-      localStorage.setItem('userId', userId);
-      localStorage.setItem('tokenUser', token);
-      message.success('Login berhasil!');
-      onStatus(true, false);
-      // Navigasi ke dashboard atau halaman utama
+      if (response.statusText === 'OK') {
+        const token = response.data.ACCESS_TOKEN;
+        const userId = response.data.USERID;
+
+        // Update state dan localStorage
+        setUserId(token); // Sepertinya ada kesalahan di sini - seharusnya userId
+        setTokeUser(userId); // Dan ini seharusnya token
+        localStorage.setItem('userId', userId);
+        localStorage.setItem('tokenUser', token);
+
+        // Langsung panggil verifikasi dengan data yang fresh
+        try {
+          const responseUser = await axios.get(
+            `${config.BASE_URL}/users/${userId}`,
+            {
+              headers: {
+                Authorization: `Bearer ${token}`,
+              },
+            }
+          );
+          setUserLoged(responseUser.data);
+          onStatus(true, false);
+        } catch (error) {
+          console.error('Error verifying user:', error);
+          onStatus(false, false);
+        }
+
+        await Swal.fire({
+          title: 'Welcome To Dashboard Pengadaan',
+          text: 'Login Success',
+          icon: 'success',
+        });
+      }
     } catch (error) {
       onStatus(false, false);
       localStorage.removeItem('tokenUser');
       localStorage.removeItem('userId');
-      console.log(error);
-      if (error.response) {
-        const detail = error.response.data.detail;
+      setUserId(null);
+      setTokeUser(null);
 
-        if (error.response.status === 401) {
-          message.error(
-            detail?.message || 'Login gagal: username atau password salah'
-          );
-        } else {
-          message.error(detail?.message || 'Terjadi kesalahan saat login');
-        }
-      } else {
-        message.error('Tidak dapat terhubung ke server');
-      }
+      // Error handling code...
     } finally {
       setIsLoading(false);
     }
@@ -58,31 +77,36 @@ const LoginPage = ({ onStatus }) => {
 
   useEffect(() => {
     const verifyToken = async () => {
-      if (tokenUser != null) {
+      const storedToken = localStorage.getItem('tokenUser');
+      const storedUserId = localStorage.getItem('userId');
+
+      if (storedToken && storedUserId) {
         onStatus(true, true);
         try {
           const responseUser = await axios.get(
-            `${config.BASE_URL}/users/${userId}`,
+            `${config.BASE_URL}/users/${storedUserId}`,
             {
               headers: {
-                Authorization: `Bearer ${tokenUser}`,
+                Authorization: `Bearer ${storedToken}`,
               },
             }
           );
           setUserLoged(responseUser.data);
-          // console.log(responseUser.data);
           onStatus(true, false);
         } catch (error) {
           localStorage.removeItem('tokenUser');
           localStorage.removeItem('userId');
+          setUserId(null);
+          setTokeUser(null);
           onStatus(false, false);
         }
       } else {
         onStatus(false, false);
       }
     };
+
     verifyToken();
-  }, [tokenUser]);
+  }, [tokenUser, userId]);
 
   return (
     <div

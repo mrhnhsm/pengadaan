@@ -20,15 +20,22 @@ const Root = () => {
       {loading ? (
         <div
           style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
             width: '100%',
             height: '100vh',
-            background: '#0000001a',
+            backgroundColor: 'rgba(0, 0, 0, 0.5)',
             display: 'flex',
+            flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
+            zIndex: 9999,
           }}>
           <Spin size="large" />
-          <p style={{ marginLeft: 20 }}>Memuat...</p>
+          <p style={{ marginTop: 16, color: 'white' }}>Memuat...</p>
         </div>
       ) : authenticated ? (
         <App />

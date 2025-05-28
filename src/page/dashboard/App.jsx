@@ -1,10 +1,12 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import '../../assets/css/date.css';
 import '../../App.css';
 import Routes from '../../page/routes/Routes';
 import { Layout, theme, DatePicker, Menu, Dropdown } from 'antd';
 import SideBar from '../../component/Sider';
 import { UserOutlined, LogoutOutlined } from '@ant-design/icons';
+import { AppContext } from '../../context/AppContext';
+import dayjs from 'dayjs';
 
 import FabMenu from '../../component/fab/FabMenu';
 
@@ -13,6 +15,9 @@ const { Header, Content } = Layout;
 
 const App = () => {
   const [collapsed, setCollapsed] = useState(false);
+  const { userLoged, handleDateRange } = useContext(AppContext);
+  const [isLoadingUser, setIsLoadingUser] = useState(true);
+
   const menu = (
     <Menu>
       <Menu.Item
@@ -31,10 +36,7 @@ const App = () => {
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
-  const handleRangeChange = (dates, dateStrings) => {
-    const [startDate, endDate] = dateStrings;
-    console.log('Start:', startDate, 'End:', endDate);
-  };
+
   return (
     <Layout>
       <SideBar
@@ -56,8 +58,10 @@ const App = () => {
             <div className="date-filter">
               <p style={{ color: 'white' }}>Filter Data:</p>
               <RangePicker
+                defaultValue={[dayjs(), dayjs()]}
+                format="DD-MM-YYYY"
                 placeholder={['Start Date', 'End Date']}
-                onChange={handleRangeChange}
+                onChange={handleDateRange}
                 style={{
                   width: 890,
                   marginRight: 200,
@@ -72,7 +76,9 @@ const App = () => {
                 trigger={['click']}>
                 <button className="profile">
                   <UserOutlined />
-                  <p className="username">Wak leman</p>
+                  <p className="username">
+                    {userLoged?.FULL_NAME ? userLoged.FULL_NAME : 'Admin'}
+                  </p>
                 </button>
               </Dropdown>
             </div>
@@ -98,7 +104,7 @@ const App = () => {
             style={{
               zIndex: 10000,
             }}>
-            <FabMenu />
+            {userLoged?.DEPT_CODE === '2PTI' && <FabMenu />}
           </div>
         </Content>
       </Layout>

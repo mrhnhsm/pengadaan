@@ -7,7 +7,7 @@ const options = {
     type: "pie",
     backgroundColor: "transparent",
     plotBackgroundColor: "transparent",
-    height: detailMode ? 650 : 250,
+    height: detailMode ? 650 : 200,
   },
   title: {
     text: detailMode ? "NILAI PAKET REGIONAL 2 (REAL VS RUPA)" : "",
