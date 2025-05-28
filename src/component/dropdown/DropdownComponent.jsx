@@ -1,6 +1,6 @@
-import React from "react";
-import { Select } from "antd";
-import "../../assets/css/dropdown.css"; // pastikan path-nya benar
+import React from 'react';
+import { Select } from 'antd';
+import '../../assets/css/dropdown.css'; // pastikan path-nya benar
 
 const { Option } = Select;
 
@@ -9,8 +9,7 @@ export function DropdownSla({ onChange }) {
     <Select
       defaultValue="vendor"
       className="custom-dropdown"
-      onChange={onChange}
-    >
+      onChange={onChange}>
       <Option value="vendor">Nama Vendor</Option>
       <Option value="wilayah">Wilayah</Option>
       <Option value="bidang">Bidang</Option>
@@ -18,13 +17,12 @@ export function DropdownSla({ onChange }) {
   );
 }
 
-export function DropdownInputExcel({ onChange }){
+export function DropdownInputExcel({ onChange }) {
   return (
     <Select
       defaultValue="select"
       className="custom-dropdown-excel"
-      onChange={onChange}
-    >
+      onChange={onChange}>
       <Option value="select">Pilih Jenis Scheduler</Option>
       <Option value="RUPA">RUPA</Option>
       <Option value="PENGADAAN">BAGIAN PENGADAAN</Option>
