@@ -56,8 +56,7 @@ const App = () => {
                 placeholder={["Start Date", "End Date"]}
                 onChange={handleRangeChange}
                 style={{
-                  width: 890,
-                  marginRight: 200,
+                  width: "auto",
                   border: "none",
                   color: "black",
                 }}

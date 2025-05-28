@@ -57,6 +57,19 @@ export default function CardIsi() {
   };
 
   const renderModalContent = () => {
+    const formatNominal = (value) => {
+      if (value >= 1_000_000_000_000) {
+        return { val: value / 1_000_000_000_000, unit: "Triliun" };
+      } else if (value >= 1_000_000_000) {
+        return { val: value / 1_000_000_000, unit: "Miliar" };
+      } else if (value >= 1_000_000) {
+        return { val: value / 1_000_000, unit: "Juta" };
+      } else if (value >= 1_000) {
+        return { val: value / 1_000, unit: "Ribu" };
+      } else {
+        return { val: value, unit: "" };
+      }
+    };
     console.log(modalContent);
     switch (modalContent) {
       case 1:
@@ -170,7 +183,15 @@ export default function CardIsi() {
                 <div className="bottom-rupa">
                   <p className="nominal-rupa">
                     NOMINAL <br />
-                    Rp. <CountUp end={item.nominal1} duration={2} />
+                    {(() => {
+                      const { val, unit } = formatNominal(item.nominal1 || 0);
+                      return (
+                        <>
+                          Rp <CountUp end={val} decimals={1} duration={2} />{" "}
+                          {unit}
+                        </>
+                      );
+                    })()}
                   </p>
                 </div>
               </div>
@@ -206,7 +227,7 @@ export default function CardIsi() {
               className="card-hover"
               style={{
                 backgroundColor: "#dcfce7",
-                height: "100%",
+                height: "98.8%",
                 overflow: "hidden",
               }}
             >
@@ -262,8 +283,15 @@ export default function CardIsi() {
 
                 <div className="bottom-rupa">
                   <p className="nominal-rupa">
-                    NOMINAL <br />
-                    Rp. <CountUp end={item.nominal3} duration={2} />
+                    {(() => {
+                      const { val, unit } = formatNominal(item.nominal3 || 0);
+                      return (
+                        <>
+                          Rp <CountUp end={val} decimals={1} duration={2} />{" "}
+                          {unit}
+                        </>
+                      );
+                    })()}
                   </p>
                 </div>
               </div>

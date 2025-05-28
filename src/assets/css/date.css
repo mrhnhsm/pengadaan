@@ -1,28 +1,24 @@
-/* Container Date Filter */
 .date-filter {
   display: flex;
-  gap: 12px;
+  width: 100%;
+  justify-content: space-between;
   align-items: center;
   background: transparent;
-  padding: 10px 18px;
   border-radius: 8px;
 }
 
-/* Inner Wrapper */
 .date-filter > div {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-/* Label Text */
 .date-filter span {
-  font-weight: 600;              /* lebih tebal */
-  font-size: 1.1rem;             /* lebih besar */
-  color: #388e3c;                /* hampir hitam, sangat jelas */
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #388e3c;
 }
 
-/* Ant Design Date Picker */
 .date-filter .ant-picker {
   width: 150px;
   border-radius: 6px;
@@ -30,41 +26,35 @@
   color: #388e3c;
   background-color: #f0fdf4;
   transition: all 0.3s ease;
-  border: 1px solid #75a5a1;     /* soft border */
+  border: 1px solid #75a5a1;
 }
 
-/* Placeholder styling */
 .ant-picker-input input::placeholder {
-  color: #388e3c !important;     /* hijau lebih gelap, kontras */
+  color: #388e3c !important;
   opacity: 0.9;
   font-size: 1rem;
 }
 
-/* Text input inside date picker */
 .date-filter .ant-picker-input input {
   color: #388e3c !important;
   font-size: 1rem;
   font-weight: 500;
 }
 
-/* Padding untuk input */
 .date-filter .ant-picker .ant-picker-input {
   padding: 10px 12px;
 }
 
-/* Icon kalender */
 .date-filter .ant-picker-suffix {
   color: #2e7d32 !important;
   font-size: 18px;
 }
 
-/* Font Awesome fallback */
 .date-filter .ant-picker-suffix i {
   font-size: 18px;
   color: #2e7d32;
 }
 
-/* Hover effect */
 .date-filter .ant-picker:hover {
   border-color: #81c784;
   box-shadow: 0 0 6px rgba(129, 199, 132, 0.6);
