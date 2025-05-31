@@ -7,6 +7,7 @@ import SideBar from '../../component/Sider';
 import { UserOutlined, LogoutOutlined } from '@ant-design/icons';
 import { AppContext } from '../../context/AppContext';
 import dayjs from 'dayjs';
+import Swal from 'sweetalert2';
 
 import FabMenu from '../../component/fab/FabMenu';
 
@@ -26,8 +27,16 @@ const App = () => {
         onClick={() => {
           localStorage.removeItem('userId');
           localStorage.removeItem('tokenUser');
-          // Redirect atau update state login jika pakai useState
-          window.location.reload(); // Atau navigate ke halaman login
+
+          Swal.fire({
+            title: 'Logged Out',
+            text: 'You have been successfully logged out.',
+            icon: 'success',
+            confirmButtonText: 'OK',
+          }).then(() => {
+            // Redirect atau reload setelah Swal ditutup
+            window.location.reload();
+          });
         }}>
         Logout
       </Menu.Item>
@@ -63,8 +72,7 @@ const App = () => {
                 placeholder={['Start Date', 'End Date']}
                 onChange={handleDateRange}
                 style={{
-                  width: 890,
-                  marginRight: 200,
+                  width: 'auto',
                   border: 'none',
                   color: 'black',
                 }}

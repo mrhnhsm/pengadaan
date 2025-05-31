@@ -1,6 +1,6 @@
 body{
   overflow-x: hidden; 
-  background-color: whitesmoke; 
+  background-color: #FBFFF5; 
 }
 .ant-layout{
   height: auto;
@@ -9,6 +9,7 @@ body{
 .header{
   display: flex;
   flex-direction: row-reverse;
+  justify-content: space-between;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
   width: auto;
   max-width: 110vw;
@@ -33,13 +34,15 @@ body{
   gap: 20px;
   height: auto;
   font-size: medium;
-  margin-left: 100px;
+  /* margin-left: 100px; */
   cursor: pointer;
   border-radius: 6px;
   color: #212529;
   background-color: #e8f5e9;
   border: 1px solid #388e3c;
   transition: all 0.3s ease;
+  margin-right: 1vw;
+  
 }
 
 .profile svg {
@@ -57,4 +60,8 @@ body{
 
 .profile:hover svg {
   color: white;
+}
+
+.username{
+  margin:0
 }

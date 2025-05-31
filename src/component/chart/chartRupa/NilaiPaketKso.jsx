@@ -1,68 +1,85 @@
-import Highcharts from "highcharts";
-import HighchartsReact from "highcharts-react-official";
-import "../../../assets/css/chart.css";
-const NilaiPaketKso = ({ detailMode = false }) => {
-const options = {
-  chart: {
-    type: "pie",
-    backgroundColor: "transparent",
-    plotBackgroundColor: "transparent",
-    height: detailMode ? 650 : 200,
-  },
-  title: {
-    text: detailMode ? "CHART NILAI PAKET KSO (REAL VS RUPA)" : "",
-    style: {
-      color: "#333333",
-      fontSize: detailMode ? "20px" : "6px",
+import Highcharts from 'highcharts';
+import HighchartsReact from 'highcharts-react-official';
+import '../../../assets/css/chart.css';
+const NilaiPaketKso = ({ detailMode = false, data }) => {
+  const options = {
+    chart: {
+      type: 'pie',
+      backgroundColor: 'transparent',
+      plotBackgroundColor: 'transparent',
+      height: detailMode ? 650 : 200,
     },
-  },
-  tooltip: {
-    pointFormat: "{series.name}: <b>{point.percentage:.1f}%</b>",
-    backgroundColor: "white",
-    style: {
-      color: "#000000",
-      fontSize: detailMode ? "14px" : "12px",
-    },
-  },
-  accessibility: {
-    point: {
-      valueSuffix: "%",
-    },
-  },
-  legend: {
-    enabled: true,
-    layout: "horizontal",
-    align: "center",
-    verticalAlign: "bottom",
-    itemStyle: {
-      color: "#000", // Warna teks legend
-      fontSize: detailMode ? "14px" : "12px",
-    },
-  },
-  plotOptions: {
-    pie: {
-      allowPointSelect: true,
-      cursor: "pointer",
-      dataLabels: {
-        enabled: false, // Matikan label dalam chart
+    title: {
+      text: detailMode ? 'CHART NILAI PAKET KSO (REAL VS RUPA)' : '',
+      style: {
+        color: '#333333',
+        fontSize: detailMode ? '20px' : '6px',
       },
-      showInLegend: true, // Tampilkan data sebagai legenda
     },
-  },
-  series: [
-    {
-      name: "Anggaran",
-      colorByPoint: true,
-      data: [
-        { name: "Real", y: 85.7 },
-        { name: "Rupa", y: 14.3 },
-      ],
+    tooltip: {
+      pointFormat:
+        '<b>{point.percentage:.1f}%</b> <br> Nilai: <b>{point.nilai}</b>',
+      backgroundColor: 'white',
+      style: {
+        color: '#000000',
+        fontSize: detailMode ? '14px' : '12px',
+      },
     },
-  ],
-};
+    accessibility: {
+      point: {
+        valueSuffix: '%',
+      },
+    },
+    legend: {
+      enabled: true,
+      layout: 'horizontal',
+      align: 'center',
+      verticalAlign: 'bottom',
+      itemStyle: {
+        color: '#000', // Warna teks legend
+        fontSize: detailMode ? '14px' : '12px',
+      },
+    },
+    plotOptions: {
+      pie: {
+        allowPointSelect: true,
+        cursor: 'pointer',
+        dataLabels: {
+          enabled: false, // Matikan label dalam chart
+        },
+        showInLegend: true, // Tampilkan data sebagai legenda
+      },
+    },
+    series: [
+      {
+        name: 'Anggaran',
+        colorByPoint: true,
+        data: [
+          {
+            name: 'Real',
+            y: data?.PERSEN_NILAI_REAL_RUPA ?? 0,
+            nilai: Math.floor(data?.TOTAL_NILAI_REALISASI ?? 0).toLocaleString(
+              'id-ID'
+            ),
+          },
+          {
+            name: 'Rupa',
+            y: data?.PERSEN_NILAI_RUPA_REAL ?? 0,
+            nilai: Math.floor(data?.TOTAL_NILAI_RUPA ?? 0).toLocaleString(
+              'id-ID'
+            ),
+          },
+        ],
+      },
+    ],
+  };
 
-
-  return <HighchartsReact highcharts={Highcharts} options={options} />;
+  return (
+    <HighchartsReact
+      highcharts={Highcharts}
+      options={options}
+    />
+  );
 };
 
 export default NilaiPaketKso;

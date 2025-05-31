@@ -28,8 +28,9 @@ const LoginPage = ({ onStatus }) => {
         USERNAME: username,
         PASSWORD: password,
       });
+      console.log(response);
 
-      if (response.statusText === 'OK') {
+      if (response.status === 200) {
         const token = response.data.ACCESS_TOKEN;
         const userId = response.data.USERID;
 
