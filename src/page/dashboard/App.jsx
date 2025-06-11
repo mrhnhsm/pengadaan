@@ -25,17 +25,27 @@ const App = () => {
         key="logout"
         icon={<LogoutOutlined />}
         onClick={() => {
-          localStorage.removeItem('userId');
-          localStorage.removeItem('tokenUser');
-
           Swal.fire({
-            title: 'Logged Out',
-            text: 'You have been successfully logged out.',
-            icon: 'success',
-            confirmButtonText: 'OK',
-          }).then(() => {
-            // Redirect atau reload setelah Swal ditutup
-            window.location.reload();
+            title: 'Yakin ingin logout?',
+            text: 'Anda akan keluar dari sesi saat ini.',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Yakin',
+            cancelButtonText: 'Batal',
+          }).then((result) => {
+            if (result.isConfirmed) {
+              localStorage.removeItem('userId');
+              localStorage.removeItem('tokenUser');
+
+              Swal.fire({
+                title: 'Berhasil Logout',
+                text: 'Anda telah berhasil logout.',
+                icon: 'success',
+                confirmButtonText: 'OK',
+              }).then(() => {
+                window.location.reload();
+              });
+            }
           });
         }}>
         Logout
@@ -106,7 +116,9 @@ const App = () => {
               width: collapsed ? '109vw' : '100vw',
               backgroundColor: '#FBFFF5',
             }}>
+            {/* View */}
             <Routes />
+            {/* View */}
           </div>
           <div
             style={{

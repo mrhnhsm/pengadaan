@@ -29,8 +29,6 @@
   background-color: #f0f5ff !important;
 }
 
-
-
 .custom-dropdown-excel {
   width: 82vw;
   /* height: 200px; */
@@ -53,7 +51,6 @@
 
 .custom-dropdown-excel .ant-select-arrow {
   color: black;
-  
 }
 
 .custom-dropdown-excel .ant-select-item-option-selected {
@@ -64,4 +61,3 @@
 .custom-dropdown-excel .ant-select-item-option:hover {
   background-color: #f0f5ff !important;
 }
-

@@ -159,6 +159,7 @@ const LoginPage = ({ onStatus }) => {
             <Button
               type="primary"
               htmlType="submit"
+              loading={isLoading}
               block>
               Login
             </Button>

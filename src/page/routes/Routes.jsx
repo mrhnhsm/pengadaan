@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
 import DashboardUtama from '../../views/DashboardUtama';
 import DashboardRupa from '../../views/DashboardRupa';
-import DashboardSla from '../../views/DashboardSla';
+import DashboardSlaFixed from '../../views/DashboardSlaFixed';
+// import DashboardSla from '../../views/DashboardSla';
 import { AppContext } from '../../context/AppContext';
 
 export default function Route() {
@@ -15,7 +16,7 @@ export default function Route() {
         // console.log(2)
         return <DashboardRupa />;
       case 'Dashboardsla':
-        return <DashboardSla />;
+        return <DashboardSlaFixed />;
       default:
         return <DashboardUtama />;
     }

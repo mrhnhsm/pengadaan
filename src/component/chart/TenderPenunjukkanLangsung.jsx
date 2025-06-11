@@ -1,6 +1,8 @@
 import Highcharts from 'highcharts';
+import Highcharts3D from 'highcharts/highcharts-3d'; // Import modul 3D
 import HighchartsReact from 'highcharts-react-official';
 import '../../assets/css/chart.css';
+
 const InvestasiEksploitasi = ({ detailMode = false, data }) => {
   const options = {
     chart: {
@@ -8,6 +10,13 @@ const InvestasiEksploitasi = ({ detailMode = false, data }) => {
       backgroundColor: 'transparent',
       plotBackgroundColor: 'transparent',
       height: detailMode ? 650 : 550,
+      // Konfigurasi 3D
+      options3d: {
+        enabled: true,
+        alpha: 45, // Sudut kemiringan (0-90)
+        beta: 0, // Rotasi horizontal
+        depth: 50, // Kedalaman 3D
+      },
     },
     title: {
       text: detailMode ? 'CHART TENDER VS PENUNJUKKAN LANGSUNG' : '',
@@ -44,8 +53,21 @@ const InvestasiEksploitasi = ({ detailMode = false, data }) => {
       pie: {
         allowPointSelect: true,
         cursor: 'pointer',
+        // Konfigurasi 3D untuk pie
+        depth: detailMode ? 50 : 35, // Ketebalan pie 3D
         dataLabels: {
-          enabled: false, // Matikan label dalam chart
+          enabled: true, // Matikan label dalam chart
+          format:
+            '<b>{point.name}</b><br>{point.percentage:.1f}%<br>Paket: {point.paket}',
+          style: {
+            color: '#000',
+            fontSize: detailMode ? '12px' : '10px',
+            fontWeight: 'bold',
+            textOutline: '1px white', // Outline putih agar teks lebih jelas
+          },
+          distance: 1, // Jarak label dari pie
+          connectorColor: '#000', // Warna garis penghubung
+          connectorWidth: 1,
         },
         showInLegend: true, // Tampilkan data sebagai legenda
       },

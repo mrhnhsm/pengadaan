@@ -1,0 +1,432 @@
+/* Dashboard SLA Fixed Styles */
+.dashboard-title {
+  color: #1e293b;
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 24px;
+  text-align: center;
+  padding: 0 20px;
+}
+
+/* Dropdown Section */
+.dropdown-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.custom-dropdown-fixed {
+  min-width: 200px;
+  max-width: 300px;
+  flex: 1;
+}
+
+.custom-dropdown-fixed .ant-select-selector {
+  border-radius: 8px !important;
+  padding: 8px 12px !important;
+  height: 42px !important;
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.custom-dropdown-fixed .ant-select-selector:hover {
+  border-color: #667eea;
+  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.2);
+}
+
+.custom-dropdown-fixed .ant-select-selector:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.2);
+}
+
+.custom-dropdown-fixed .ant-select-arrow {
+  color: #6b7280;
+}
+
+.custom-dropdown-fixed .ant-select-item-option-selected {
+  background-color: #667eea !important;
+  color: white !important;
+  font-weight: 600;
+}
+
+.custom-dropdown-fixed .ant-select-item-option:hover {
+  background-color: #e5e7eb !important;
+}
+
+/* Cards Section */
+.cards-section {
+  margin-bottom: 32px;
+  padding: 0 20px;
+}
+
+.dashboard-card {
+  height: 140px;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+  width: 100%;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.card-jumlah-paket {
+  background: linear-gradient(135deg, #fef08a 0%, #f59e0b 100%);
+}
+
+.card-nilai-paket {
+  background: linear-gradient(135deg, #dcfce7 0%, #10b981 100%);
+}
+
+.card-durasi-tender {
+  background: linear-gradient(135deg, #e0f2fe 0%, #0ea5e9 100%);
+}
+
+.card-durasi-penunjukan {
+  background: linear-gradient(135deg, #fce7f3 0%, #ec4899 100%);
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 16px;
+}
+
+.card-header {
+  margin-bottom: 12px;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: #374151;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+}
+
+.card-value {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-number {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #1f2937;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* Table Section */
+.table-section {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 0 20px;
+  overflow: hidden;
+}
+
+.custom-table {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 13px;
+  width: auto;
+  margin-right: 13.5vw;
+}
+
+.custom-table .ant-table-thead > tr > th {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  border: none;
+  font-size: 12px;
+  padding: 12px 8px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.custom-table .ant-table-tbody > tr > td {
+  padding: 12px 8px;
+  border-bottom: 1px solid #f0f0f0;
+  vertical-align: top;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.custom-table .ant-table-tbody > tr:hover > td {
+  background-color: #f8f9ff;
+}
+
+.custom-table .ant-table-tbody > tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.custom-table .ant-table-tbody > tr:nth-child(even):hover > td {
+  background-color: #f0f2ff;
+}
+
+.custom-table .ant-table-container {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.custom-table .ant-table-content {
+  overflow-x: auto;
+}
+
+/* Pagination */
+.custom-pagination {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.custom-pagination .ant-pagination-item {
+  border-radius: 6px;
+  border: 1px solid #d9d9d9;
+  margin: 0 4px;
+}
+
+.custom-pagination .ant-pagination-item-active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: #667eea;
+}
+
+.custom-pagination .ant-pagination-item-active a {
+  color: white;
+}
+
+.custom-pagination .ant-pagination-prev,
+.custom-pagination .ant-pagination-next {
+  border-radius: 6px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .dashboard-title {
+    font-size: 20px;
+  }
+
+  .card-number {
+    font-size: 18px;
+  }
+
+  .card-title {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 992px) {
+  .dropdown-section {
+    justify-content: center;
+  }
+
+  .custom-dropdown-fixed {
+    min-width: 180px;
+  }
+
+  .dashboard-card {
+    height: 120px;
+  }
+
+  .card-number {
+    font-size: 16px;
+  }
+
+  .card-title {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-title {
+    font-size: 18px;
+    margin-bottom: 16px;
+    padding: 0 16px;
+  }
+
+  .dropdown-section {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding: 0 16px;
+  }
+
+  .custom-dropdown-fixed {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .cards-section {
+    margin-bottom: 24px;
+    padding: 0 16px;
+  }
+
+  .dashboard-card {
+    height: 100px;
+  }
+
+  .card-content {
+    padding: 12px;
+  }
+
+  .card-number {
+    font-size: 14px;
+  }
+
+  .card-title {
+    font-size: 9px;
+    line-height: 1.1;
+  }
+
+  .table-section {
+    padding: 16px;
+    margin: 0 16px;
+  }
+
+  .custom-table {
+    font-size: 11px;
+  }
+
+  .custom-table .ant-table-thead > tr > th,
+  .custom-table .ant-table-tbody > tr > td {
+    padding: 8px 4px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .dashboard-title {
+    font-size: 16px;
+    padding: 0 12px;
+  }
+
+  .dropdown-section {
+    padding: 0 12px;
+  }
+
+  .cards-section {
+    padding: 0 12px;
+  }
+
+  .dashboard-card {
+    height: 90px;
+  }
+
+  .card-number {
+    font-size: 12px;
+  }
+
+  .card-title {
+    font-size: 8px;
+  }
+
+  .table-section {
+    padding: 12px;
+    margin: 0 12px;
+  }
+
+  .custom-table .ant-table-thead > tr > th,
+  .custom-table .ant-table-tbody > tr > td {
+    padding: 6px 3px;
+    font-size: 9px;
+  }
+}
+
+/* Loading States */
+.custom-table .ant-spin-container {
+  min-height: 200px;
+}
+
+.custom-table .ant-spin-dot-item {
+  background-color: #667eea;
+}
+
+/* Scrollbar Styling */
+.custom-table .ant-table-content::-webkit-scrollbar {
+  height: 8px;
+}
+
+.custom-table .ant-table-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.custom-table .ant-table-content::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.custom-table .ant-table-content::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Table Cell Content */
+.table-cell-content {
+  max-width: 200px;
+  word-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+.table-cell-content.text-transform {
+  text-transform: capitalize;
+}
+
+.table-cell-content.currency {
+  font-weight: 600;
+  color: #1890ff;
+  text-align: right;
+}
+
+.table-cell-content.vendor-name {
+  font-weight: 500;
+  color: #52c41a;
+}
+
+.table-cell-content.method {
+  background: #e6f7ff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 500;
+  text-align: center;
+  display: inline-block;
+  min-width: 80px;
+}
+
+/* Ensure proper spacing and prevent overflow */
+body {
+  overflow-x: hidden;
+}
+
+.ant-row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.ant-col {
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+}

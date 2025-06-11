@@ -1,8 +1,8 @@
 .persentase-sla {
   display: flex;
   justify-content: center; /* center horizontal */
-  align-items: center;     /* center vertical */
-  height: 100%;            /* pastikan ada tinggi untuk vertical centering */
+  align-items: center; /* center vertical */
+  height: 100%; /* pastikan ada tinggi untuk vertical centering */
 }
 
 .table-wrapper .ant-table-tbody > tr:nth-child(odd) {
@@ -13,7 +13,7 @@
   background-color: #e6f7ff !important;
 }
 
-.isi-card-sla{
+.isi-card-sla {
   font-size: 2rem;
   color: black;
 }

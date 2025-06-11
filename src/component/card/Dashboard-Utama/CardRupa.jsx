@@ -227,6 +227,7 @@ export default function CardIsi() {
                           end={item.paket1}
                           duration={2}
                         />{' '}
+                        <br />
                         Paket
                       </p>
                     </div>
@@ -309,6 +310,7 @@ export default function CardIsi() {
                           end={item.paket3}
                           duration={2}
                         />{' '}
+                        <br />
                         Paket
                       </p>
                     </div>

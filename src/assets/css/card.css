@@ -7,26 +7,29 @@
 }
 
 .card-hover:hover {
-  background: linear-gradient(to bottom right, #cbd5e1, #e2e8f0); /* biru abu-abu lembut */
+  background: linear-gradient(
+    to bottom right,
+    #cbd5e1,
+    #e2e8f0
+  ); /* biru abu-abu lembut */
   transform: scale(1.01); /* lebih halus */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* lembut, tidak menyilaukan */
 }
 
-.container{
+.container {
   display: flex;
   flex-direction: column;
 }
-
 
 .container-top-card {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center; 
+  align-items: center;
 }
 
-.show-icon{
-   color: white;
+.show-icon {
+  color: white;
   font-size: 2rem;
   margin: 0;
   font-weight: bolder;
@@ -39,15 +42,14 @@
   font-weight: bolder;
 }
 
-.title{
+.title {
   margin-bottom: 2vh;
   font-size: 1rem;
   font-weight: bold;
   color: #1e293b;
 }
 
-
-.title-topgroup{
+.title-topgroup {
   margin-bottom: 2vh;
   font-size: 28px;
   font-weight: bold;
@@ -60,7 +62,7 @@
   margin: 0;
 }
 
-.container-row-2{
+.container-row-2 {
   display: flex;
   align-items: center;
   color: #1e293b;
@@ -100,10 +102,9 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-
 }
 
-.ant-modal-content{
+.ant-modal-content {
   width: auto;
 }
 
@@ -112,14 +113,12 @@
   font-size: xx-large;
 }
 
-.top-card{
+.top-card {
   background: linear-gradient(to right, #4e54c8, #8f94fb);
   height: auto;
-  
 }
 
-
-.top-groud-card-nominal{
+.top-groud-card-nominal {
   /* text-align: center; */
   font-size: 3cap;
   margin: 0;
@@ -127,7 +126,7 @@
   font-weight: bold;
 }
 
-.chart-card{
+.chart-card {
   display: flex;
   flex-direction: column;
 }
